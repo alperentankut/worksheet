@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!--1-->  <a href="http://www.google.com.tr"> Google'a gitmek için tıklayınız.</a>
+    
+    
+ <!--2,3-->  <p> <a href="http://www.google.com.tr" target="_blank" title="Google linki"> Yeni sekmede açmak için buraya tıklayınız.</a> </p>
+
+ <!--4-->   <a href="format.html"> formatla ilgili siteyi açmak için tıklayınız</a>
+
+
+<!--
+
+1-//<a> etiketi link eklemek için kullanılır 
+2-//bu etikette link default olarak aynı sekmede açılır. Farklı sekmede açılması için target etiketini kullanırız.
+3-//Linkin üstüne geldiğimizde gözükecek yazıyı özelleştirmek için target etiketinin yanına tittle etiketi ekleriz.
+4-//Siteden kendi dosyamızdaki bi siteyi açmak için yine <a href=> etiketini kullanırız fakat link yerine o dosyanın adını yazarız
+
+
+-->
+</body>
+</html>
