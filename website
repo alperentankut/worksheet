@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ücretsiz Programlama Öğrenmek</title>
 </head>
-<body style="background-color: blue">
+<body style="background-color: rgb(0, 0, 0)">
    
    
-    <h1>Hoşgeldiniz</h1>
-    <h4>Hoşgeldiniz</h4>
-    <p>asdasddsddsdsdsd</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. br Voluptates corporis ea quasi quibusdam culpa aliquam quis minus error sequi fugiat.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<hr> At cum accusamus exercitationem in.</p>
+    <h1 style="color:ghostwhite">Hoşgeldiniz</h1>
+    <h4 style="color:ghostwhite">Hoşgeldiniz</h4>
+    <p style="color: cyan; font-size: medium;">asdasddsddsdsdsd</p>
+    <p style="color: cornsilk; font-size: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. br Voluptates corporis ea quasi quibusdam culpa aliquam quis minus error sequi fugiat.</p>
+    <p style="color: brown;">Lorem ipsum dolor sit amet consectetur adipisicing elit.<hr> At cum accusamus exercitationem in.</p>
    
 </body>
 </html>
