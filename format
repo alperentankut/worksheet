@@ -8,10 +8,10 @@
 </head>
 <body>
     <p>
-        Lorem ipsum dolor <strong>amet</strong> sit consectetur <em>adipisicing</em> elit.  <mark>Libero</mark> <small>alias ab</small> laudantium! At?
+    <!--1,2,4,3-->    Lorem ipsum dolor <strong>amet</strong> sit consectetur <em>adipisicing</em> elit.  <mark>Libero</mark> <small>alias ab</small> laudantium! At?
     </p>
 
-    <pre>
+   <!--5--> <pre>
 
         Ey mavi göklerin beyaz ve kızıl süsü,
         Kız kardeşimin gelinliği, şehidimin son örtüsü,
@@ -22,11 +22,11 @@
 
  <!--
 
-   // <strong> etiketi diğer karakterleri etkilmeden arasına aldığı objeyi kalın yazar
-   // <em> etiketi arasına aldığı karakterleri italik yazdırır
-   // <small> etiketi arasına aldığı karakterleri küçük yazdırır
-   // <mark> etiketi arasına aldığı karakterleri vurgular
-   // <pre> etiketi kullanarak örneğin şiir gibi yazıları formatını değiştirmeden direk sayfaya geçirebiliriz     
+   1-// <strong> etiketi diğer karakterleri etkilmeden arasına aldığı objeyi kalın yazar
+   2- // <em> etiketi arasına aldığı karakterleri italik yazdırır
+   3-// <small> etiketi arasına aldığı karakterleri küçük yazdırır
+   4-// <mark> etiketi arasına aldığı karakterleri vurgular
+   5-// <pre> etiketi kullanarak örneğin şiir gibi yazıları formatını değiştirmeden direk sayfaya geçirebiliriz     
 -->
     
 </body>
