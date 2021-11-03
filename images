@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--1,2,3-->  <img src="https://www.mercedes-benz.com.tr/passengercars/mercedes-benz-cars/models/g-class/suv/amg/comparison-slider/_jcr_content/comparisonslider/par/comparisonslide_1811252670/interiorImage.MQ6.12.20190926161325.jpeg"
+   width="400"
+   height="400"
+   alt="Mercedes G63"
+   >
+
+  <!--4--> <img src="./images/G63.webp"
+   alt="Mercedes G63"
+   height="200"
+   width="200"
+
+
+   >
+ <!--5--> <p> <a href="https://www.mercedes-benz.com.tr/passengercars/mercedes-benz-cars/models/g-class/suv/amg/comparison-slider/_jcr_content/comparisonslider/par/comparisonslide_1811252670/interiorImage.MQ6.12.20190926161325.jpeg" title="G63" target="_blank"> G63 için tıklayınız </a>
+  </p>
+   <!--
+    1-//sayfaya resim eklemek için <img> etiketi kullanırız. Kapatma etiketi yoktur tek etiket!!
+    2-//en ve boy uzunluğunu ayarlamak istersek width ve height etiketlerini kullanırız.
+    3-//örneğin internetle alakalı bir problem olduğunda resim açılmadığında resim yerine açıklama eklemek için alt etiketini kullanırız
+    4-//eğer resmi internetten değil de kendi dosyamızdan yüklemek istiyorsak ./ etiketiyle klasöre ulaşır ve resim dosyasının adını yazarız
+    5-//eğer resmi linkle eklemek istiyorsak <a> etiketini kullanırız.
+
+
+   -->
+</body>
+</html>
