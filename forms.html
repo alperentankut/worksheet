@@ -27,11 +27,11 @@
     <form>  
       
          <label for="name"> Name </label> <br>
-         <input type="text" id="name" name="name"/> <br>
+         <input type="text" id="name" name="name" placeholder="İsminizi yazınız"/> <br>
          <input type="submit" value="Gönder"/>
          <input type="reset" value="Sıfırla"/><br>
          <label for="email">Email</label> <br>
-         <input type="email" name="email" id="email"><br>
+         <input type="email" name="email" id="email" placeholder="E-mail giriniz"><br>
          <input type="submit" value="Gönder"/>
          <input type="reset" value="Sıfırla"/> <br>
          <label for="password">Parola</label> <br>
@@ -70,8 +70,48 @@
 
         -->
 
+        Degree <br>
+        <select name="degree" id="degree">
+        <option value="msc">Yüksek Lisans</option>
+        <option value="bachelor">Lisans</option>
+        <option value="phd">Doktora</option>
         
-         Hobbies <br>
+       
+        </select>
+        <input type="submit" name="gönder" > <br>
+        <!--
+
+        -->
+
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Mesajınızı yazınız"></textarea> <br>
+        <input type="submit" name="Gönder"><br>
+
+        <!--
+        1-//textarea etiketi sayfada yazı yazacağımız alanı oluşturur. Burdaki cols değeri sütun sayısını rows ise satır sayısını belirler.
+        2-//placeholder etiketi ise kutu boşken içinde gözükecek geçici mesajı gösterir.
+        3-//placeholder diğer etiketlerde de kullanılabilir. Örneğin yukardaki name , email gibi alanlarda input etiketi içerisine yazılabilir
+
+
+
+
+
+        -->
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <!--
+
+
+        -->
+  
+        
+        Hobbies <br>
          Art
          <input type="checkbox" name="art" id="art">
          Music
