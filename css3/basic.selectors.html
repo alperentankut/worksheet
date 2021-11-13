@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasicSelectors</title>
+    <style>
+
+        h1{
+            color: brown;
+            background-color: cadetblue;
+        }
+        p{
+            color: darkblue;
+            background-color: chartreuse;
+        }
+        /* //eğer birden fazla farklı sectorun aynı özellikte olmasını istiyorsak style etiketinin altına örneğin h1,p,h2 gibi virgülle yazıp tasarlamaya
+        başlarız
+        h1,p1{
+            color :red ;
+        }
+        //eğer tasarlayacağımız şeyi id ile seçmek istiyorsak # kullanarak tasarlayacağımız kısmı id'si ile seçeriz.
+
+        #logo{
+            color : blue ;
+            background-color : white ;
+        }
+
+        //eğer tasarlayacağımız şeyi class olarak seçecek isek bu sefer # yerine . kullanıp class adını yazıyoruz.
+
+        .info{
+        color : red ;
+        background-color : white ;
+        }
+
+        //eğer class ve id elemanlarını beraber almak istiyorsak ;
+
+        #info, .info {
+         color : red;
+        background-color:purple;
+        }
+        //eğer hem id si para1 hem de class'ı lead olan bir etiket seçmek istersek bu sefer virgülsüz bir yazım yapmamız gerekecek
+
+        #para1.lead {
+        color:blue;
+        background:purple;
+
+        //normalde link etiketlerinde default olarak linkin altı çizili gelir. Biz bunu kaldırmak istiyorsak ;
+
+        a{
+        text-decoration : none ; 
+        
+        }
+        //eğer aşağıdaki textte ul in içindeki li nin içindeki a etiketini seçmek istiyorsak 
+        
+        ul li a {
+            color : brown;
+
+        } 
+
+        //class'ı info olanların span'lerini çekmek istersek
+
+        .info span {
+            color : red;
+        }
+
+        //class'ı info olup span ı da primary olanı çekmek istersek 
+
+        .info .primary {
+            color : red;
+        }
+        //sayfamızdaki bütün elemanları seçmek istiyorsak * seçicisini kullanmamız gerekli. Bu seçici evrensel bir seçicidir. 
+        
+
+        * {
+            font-size : 30px;
+        } */
+        
+        </style>
+</head>
+<body>
+    <header>
+
+        <h1>Header1</h1>
+
+
+        <h1 id="logo">Başlık1</h1>
+
+        <ul>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Exams</a></li>
+        </ul>
+
+    <header>
+
+        <h1>Header2</h1>
+
+        <p id="para1" class="lead info">
+            Lorem <span> ipsum </span> dolor sit amet.</p>
+
+        <p class="info">
+            Lorem ipsum dolor <span class="primary">  sit amet</span> consectetur adipisicing.</p>
+
+        <p>Lorem, ipsum dolor.</p>
+
+        <a href="./basic.selectors.html">Home</a>
+
+
+    </header>
+
+    
+    
+    
+    </header>
+    
+</body>
+</html>
