@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasicSelectors</title>
+       <!-- <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/style2.css"> 
+     
+        //burda da yine aynı durum szö
+        -->
+
+        <style>
+
+            h1{
+               color: brown !important ;
+           }
+   
+           #logo {
+               color: blue;
+           }
+           
+           /* //css de çalışma hiyerarşisi yukarıdan aşağıya doğrudur. Biz önce tüm h1 leri seçip renk verdik ama altta id'si logo olan elementi
+           seçtiğimizde ikinci komutumuz geçerli olacaktır. Bu yüzden genel seçicileri en tepeye , özel seçicilerimizi ise altlara koymaya
+           özen gösteririz. Eğer bu durumun olmamasını istiyorsak etkilenmemesini istediğimiz css koduna !important kelimesini ekleriz. */
+          
+           </style>
+
+</head>
+<body>
+    <header>
+
+        <h1>Header1</h1>
+
+
+        <h1 id="logo">Başlık1</h1>
+
+        <ul>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">Exams</a></li>
+        </ul>
+
+    <header>
+
+        <h1>Header2</h1>
+
+        <p id="para1" class="lead info">
+            Lorem <span> ipsum </span> dolor sit amet.</p>
+
+        <p class="info">
+            Lorem ipsum dolor <span class="primary">  sit amet</span> consectetur adipisicing.</p>
+
+        <p>Lorem, ipsum dolor.</p>
+
+        <a href="./basic.selectors.html">Home</a>
+
+
+    </header>
+
+    
+    
+    
+    </header>
+    
+</body>
+</html>
