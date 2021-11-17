@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>borders</title>
+    <style>
+        #box-1{
+            background : red;
+            border-width: 10px; /*çerçevenin kalınlığını ayarlıyoruz.*/
+            border-color: black;
+            border-style: solid; /*border'ın tipini belirliyor */
+            /* border : 5px , black , solid   bu şekilde bir yazımda mevcut. */
+            border-radius: 10px; /*burda radius etiketiyle border'ın köşelerine eğim veriyoruz*/
+
+            /* örneğin sadece bir kenara border çizmek istersek ise;
+            border-left-width: 5px;
+            border-left-color: red;
+            border-left-style: solid; 
+            //bu şekilde bir yazımla istediğimiz kenara border ekleyebiliriz.*/
+
+            
+            
+
+        }
+        #box-2{
+            background:red;
+            width: 90px;
+            height: 90px;
+            border-color:black;
+            border-style: solid;
+            border-radius: 70px;
+        }   /*!!!height ve border-radius değeri aynı olursa tam yuvarlak bir div oluşturmuş oluruz*/     
+    </style>
+</head>
+<body>
+    <div id="box-1">
+        <h1>Başlık1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, porro?</p>
+
+    </div>
+    <div id="box-2">
+
+        <h2>Başlık2</h2>
+        
+    </div>
+    
+</body>
+</html>
