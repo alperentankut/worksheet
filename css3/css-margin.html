@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-margin</title>
+    <style>
+        *{
+            margin: 0;
+            padding : 0;
+        }
+        /* normalde tarayıcılarda default olarak bir margin ve padding değeri verilir. Biz bunu sıfırlamak istersek yuarıdaki gibi bir reset css kodu
+        yazarız. */
+        div.box-1{
+            /*top right bottom left şeklinde saat yönünde tek satırda yazabiliriz.
+            margin : 30px 50px 40px 20px
+            margin-top:30px;
+            margin-right: 50px;
+            margin-bottom:40px;
+            margin-left: 50px;
+             */
+             /* eğer contentimizi sayfanın tam ortasına almak istiyorsak : */
+            background: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quaerat.
+    </div>
+    
+</body>
+</html>
