@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-paddingDocument</title>
+    <style>
+        *{
+            margin : 0;
+            padding: 0;
+        }
+        
+        div.box-1{
+            width: 500px;
+            height: 200px;
+            border : 5px solid red;
+            padding : 40px;
+            box-sizing: border-box;
+            
+        }
+    </style>
+    <!--
+    //biz width ve height değerlerini verdiğimizde sadece divin içerisindeki contentin genişliğini ve yüksekliğini ayarlamış oluyoruz.
+    //border-box özelliği sayesinde ; normalde width , height değerlerimizi girdiğimizde bu değerler sağdan soldan padding ve border değerleriyle 
+    toplanıp sayfada ona göre yer kaplıyor. Fakat biz border-box etiketini kullandığımızda bütün bu değerlerin toplamı width e eşit olacak şekilde
+    ayarlanıyor.     
+-->
+
+</head>
+<body>
+    <div class="box-1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quaerat.
+    </div>
+    
+</body>
+</html>
