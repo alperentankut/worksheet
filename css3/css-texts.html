@@ -5,8 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS-texts</title>
+    <style>
+        /* h1{
+            background: brown;
+        }
+        .head-1{
+            text-align: center;
+        }
+        .head-2{
+            text-align: right;
+        } */
+        div{
+            width: 300px;
+            height: 300px;
+            border : 5px solid red;
+            
+        } /*burda text-align etiketini borderın içindeki contenti merkeze almak için kullandık
+            Normal metinlerde kullandığımız zaman yazıyı sayfada konumlandırıyoruz*/
+        .box-1{
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+        .box-2{
+            text-align: right;
+            text-transform: capitalize; /*bu komut yazının harflerini büyütmek için kullanılır. capitalize yalnızca baş harfi büyütür.*/
+            
+        }
+        .second-box-2{
+            letter-spacing: 2px;
+            text-align: right;
+        }
+        .text-1{
+            text-decoration: underline;
+        }
+        .text-2{
+            text-decoration: overline;
+        }
+        .text-3{
+            text-decoration: line-through;
+        }
+        a{
+            text-decoration: none; /*default olarak linklerin altılı çizili olarak gösteriliyor. Bu komutla bu durumu engelliyoruz*/
+            color: brown;
+        }
+
+    </style>
 </head>
 <body>
+    <!-- <h1 class="head-1">Başlık1</h1>
+    <h1 class="head-2">Başlık2</h1>
+    <h1 class="head-3">Başlık3</h1> -->
+    <div>
+        <h1 class="box-1">Başlık</h1>
+        <p>Lorem <span class="text-2"> ipsum dolor</span> sit, <span class="text-1"> amet consectetur </span> <span class="text-3"> adipisicing </span> elit. Illo, autem.</p>
+        <p>Lorem <a href="#">ipsum,</a>  dolor sit amet consectetur adipisicing elit. Necessitatibus, totam?</p>
+    </div>
+    <div>
+        <h1 class="box-2">başlık</h1>
+        <p class="second-box-2">Lorem, ipsum.</p> 
+    </div>
     
 </body>
 </html>
