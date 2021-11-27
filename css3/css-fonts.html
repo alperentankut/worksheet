@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-fonts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        h1{
+            font-family: 'Roboto', sans-serif;   /*3 veya 2 tane farklı font yazılmasının sebebi ; farklı cihazlarda font tipleri farklı isimlerle
+            kodlanmış olabilir. Bundan dolayı 3 tane yazıyoruz.*/
+             
+        }
+        /* //farklı fontları google fontsdan embed kodu olarak ekleyebiliriz. Eklerken işimize yaramayan seçenekleri kaldırırsak sitenin yüklenme
+        hızı artacaktır.Linkimizi title ın hemen altına yerleştirebiliriz. */
+        p{
+            font-size: 1.5rem;
+            /* line-height: 1.5em; 
+            //satırlar arasındaki boşluğu ayarlıyoruz. em etiketi elementimizin font-size'ının 1.5 katı demek. Bu gösterim bize
+            şöyle bir kolaylık sağlıyor; Farklı bir zamanda font-size ımızı düzenlediğimizde daha sonra bütün alt elementleri tek tek düzenlemek
+            yerine sadece font-size ı düzenleyerek diğer elementlere de bu değişikliği uygulamış oluruz.*/
+             line-height: 1.5rem; /*Burdaki rem değeri de bizim root elementimiz yani html in font-size'ının 1.5 katı demek oluyor */
+             font-style: italic; /*Yazı italic mi normal mi veya farklı biz özellik istiyorsak onu ayarlıyoruz*/
+             font-weight:bold; /*Yazını kalınlığını ayarlıyoruz*/
+        }
+        div{
+            height: 300px;
+            width: 300px;
+            border : 3px solid red
+        }
+        div span{
+            font-size: 50%;
+        }
+        /*//Yukarıdaki span divin içinde olduğu için divimiz default olarak hangi font-size değerini alıyorsa onun yarısını almış olacak. */
+    </style>
+</head>
+<body>
+    <!-- <h1>Başlık 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, quos voluptatem sequi, quaerat quibusdam odio ipsam dignissimos perspiciatis molestias, ea qui nostrum? Quia cumque exercitationem quam rem aperiam omnis mollitia inventore quas id nam eius, placeat repudiandae alias quae amet assumenda quasi natus, veritatis officia laudantium accusamus! Deserunt, debitis fugit!</p> -->
+    <div>
+        <p>Lorem ipsum dolor sit amet <span> adipisicing elit.</span> Amet, blanditiis.</p>
+    </div>
+</body>
+</html>
