@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-PseudoElements</title>
+    <style>
+        /* .para1{
+            font-size: 1.5em;
+            letter-spacing: 2px;  harfler arasındaki boşluğu ayarlıyoruz 
+            line-height: 1.5em; Burda 1.5em değeri ilk başta font-size a verdiğimiz 1.5em değeri üzerinden hesaplanıyor.
+        }
+        .para1::first-line {
+            color: red;
+        }
+        .para1::first-letter{
+            color: blue;
+            font-size: 40px; 
+        }*/
+        .para1::after{
+            content : url("https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_1280.jpg") /*.para1 classından sonra gelecek contenti yazıyoruz.*/
+            
+        }
+        .para1::before{
+            content : "paragraf öncesi"
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="para1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae voluptate voluptatem mollitia laboriosam, tenetur soluta eveniet? Quam ut iste quod cumque a, delectus corporis doloribus nobis omnis, totam pariatur! Doloribus laudantium animi sint! Aliquam impedit cum quos itaque, dolore ab totam, minus nam aliquid culpa illo accusantium iusto maxime. Consectetur molestias doloribus vero, distinctio numquam adipisci tempora ratione dignissimos soluta recusandae iusto, nulla quis minima iste. Minima ex non ipsum perspiciatis ratione rem velit alias nobis, beatae eos pariatur totam deserunt officia nam fugiat incidunt, voluptate ea repudiandae perferendis adipisci ad consequuntur magni! Quos voluptatibus possimus voluptatum non sunt aspernatur.
+        </p>
+    </div>
+    
+</body>
+</html>
