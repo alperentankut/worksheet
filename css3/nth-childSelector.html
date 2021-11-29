@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child-selector</title>
+    <style>
+        p{
+            font-size: 1.5em;
+        }
+        ul{
+            font-size: 1.5em;
+            list-style-type: none; /*noktaları kaldırmaya yarıyor.*/
+            
+        }
+        ul li:nth-child(2n){
+            color : red;
+            /*burda n değerimiz 0 dan başlıyor sonrasında 1 değerini aldığında 2n 2 oluyor 2 değerini aldığında 2n
+            4 oluyor. Bu şekilde 2 ve 4. çocukları seçmiş oluyoruz. 2n+1 şeklindeki gösterimde ise aynı kural geçerli*/
+        }
+        ul li :nth-child(2n+1){
+            color: purple;
+        }
+        ul li:nth-child(n + 4){
+            background-color: black;
+        }
+        /* p:nth-child(1){
+            color: red;
+            font-size: 1.7em;
+            letter-spacing: 1px;
+            text-decoration: underline;
+
+        }
+        p:nth-child(3){
+            background: blueviolet;
+            color: orange;
+        } */
+        /* p:nth-child(even){
+            color: orange;
+        } /*(even çift demek.)Burdaki komutla sadece çift sayıya sahip çocukları düzenliyoruz.
+        p:nth-child(odd){
+            background: peru;
+            text-decoration: line-through;
+        } 
+          an + b şeklinde bi gösterimimiz var. Burda default olarak a=0 ve b=0 değerini alıyor. */
+    </style>
+</head>
+<body>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptate?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, possimus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, maxime?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, tempore.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, dicta!</p> -->
+    <ul>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+    </ul>
+
+</body>
+</html>
+<!-- //body elementinin altındaki her şey body elementinin çocukları yani (child) olarak kabul ediliyor. Burda p ler body'nin child sectorleri
+body ise p elementlerinin parent'ı olarak kabul edilir. -->
