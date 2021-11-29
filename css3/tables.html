@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td,tr {
+            border :3px  solid black ;
+            border-collapse : collapse;
+            border-radius:2px ;
+            
+        }
+        table{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.5em;
+        }
+        td,th {
+            padding: 10px;
+        }
+        thead tr{
+            background-color: green;
+            color: black;
+        }
+        tbody tr{
+            text-align: center;
+        }
+        /* tbody tr :nth-child(even){
+            background-color: #f2f2f2;
+        } */
+         tbody tr :nth-child(2n) {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ad</th>
+                <th>soyad</th>
+                <th>maaş</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Alperen</td>
+                <td>Tankut</td>
+                <td>5000</td>
+            </tr>
+
+            <tr>
+                <td>Oguzcan</td>
+                <td>Budumlu</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Oguzcan</td>
+                <td>Budumlu</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Oguzcan</td>
+                <td>Budumlu</td>
+                <td>10000</td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
