@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css-position</title>
     <style>
+        span{
+            width: 50px;
+            height: 50px;
+            background: red;
+            display: inline-block;
+            position: relative;
+            left:75px;
+            z-index: -1;
+        } /*Burda span e position verdiğimizde eski yeri hala o varmış gibi dolur gözüküyor. Bunun sebebi tarayıcı span ı hala eski yerindeymiş
+        gibi algılayıp orayı dolu gibi gösteriyor.*/
+        /* .outer-box{
+            width: 200px;
+            height: 200px;
+            background: #f3f3f3;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        .inner-box{
+            width: 50px;
+            height: 50px;
+            background: blue;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        } */
         /* .red {
             background: red;
             height: 100px;
@@ -40,6 +66,11 @@
     </style>
 </head>
 <body> 
+    <span></span>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, saepe?
+    <!-- <div class="outer-box">
+        <div class="inner-box"></div>
+    </div> -->
     <!-- <div class="fixed-topbar">
         udemy
     </div> -->
@@ -53,4 +84,9 @@
 konumlandırmamıza yarıyor.
 //normalde bizim red classlı divimiz blue dan önce geldiği için blue kutumuz onun üstüne geldi. Eğer bunun olmasını istemezsek z index özelliğini
 kullanırız.
-//z-index default olarak o değerini alır. Z-indexi büyük olan küçük olanın önüne geçiyor mantık bu. -->
+//z-index default olarak o değerini alır. Z-indexi büyük olan küçük olanın önüne geçiyor mantık bu.
+//absolute komutunu kullanırken dikkat etmemiz gereken bir nokta var. Bu da absolute etiketini kullanacağımız divin kapsayıcı divinin
+position ı static olamaz. Fixed veya relative olmalı. Bunun sebebi kapsayıcı dive position vermediğimiz zaman alt divimiz bi üstteki 
+kapsayıcıya gidiyor yani bu da body oluyor o zaman da kapsayıcı div sınırlarından çıkmış oluyor. Bundan dolayı position komutumuz 
+istediğimiz gibi çalışmıyor.Absolute kullandıktan sonra artık yeni sınırlarımız kapsayıcı divin sınırları oluyor.
+Yani left,bottom (0,0) konumu artık kapsayıcı divin sınırları oluyor. -->
