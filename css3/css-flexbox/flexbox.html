@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-flexbox</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            /*justify-content: flex-end; bu default olarak flex-start olarak değer alır.*/
+            /*justify-content: space-around; sondaki ve baştaki boşluk ortadakilerin yarısı boyutunda oluyor*/
+            /*justify-content: space-evenly; aradaki bütün boşlukların boyutu aynı*/
+            justify-content: flex-start; /*boşluklar contentlerin arasında oluyor*/
+            background: black;
+            /*align-items:flex-start; bu etiket contentimizi yukardan ve aşağıdan ortalamaya yarar. Default olarak bu stretch değerini alır. */
+            min-height: 600px; /*Bu etiket şu anlama geliyor : senin height değerin minimum 600px olsun ama bu height ı geçecek content
+            gelirse de height ı content kadar arttırabilirsin*/
+            margin: 0 auto;
+            width: 75%;
+            color: black;
+            flex-wrap: wrap;
+            flex-direction: column;/*bu komut ise yatayda justify-content ve dikeyde align-items etiketlerini yatayda align-items dikeyde
+            justify-content kullanıyoruz. */
+
+        }
+        .box{
+            text-align: center;
+            border: 1px solid black;
+            background: #f2f2f2;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">
+        <h1>Article</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="box">
+        <h1>Article</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="box">
+        <h1>Article</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+   
+  
+    
+</div>
+    
+</body>
+</html>
+<!-- //Biz height vermememize rağmen contentin yüksekliği container ile aynı oldu. Bu flexboxla gelen default bir özellik
+    //eklediğimiz boxlara bir width değeri vermiştik. Diyelim ki biz container'ımızın içine x tane box ekledik ve bunların width değeri
+    toplamı containerden büyük oldu.Bu durumda bizim fleximizin default özelliği olarak boxları yeniden boyutlandırarak containerın
+    içine sığdırır.Default olarak gelen bu özellik yerine containerın bittiği yerde yeni box ımız alta geçsin istersek flex-wrap 
+    etiketini kullanırız. -->
