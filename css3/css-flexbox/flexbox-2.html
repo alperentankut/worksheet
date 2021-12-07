@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox-2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 75%;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: row;
+            min-height: 600px;
+            /* align-items: center; */
+            background-color: black;
+            justify-content: flex-start;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: #f2f2f2;
+            border: 1px solid black;
+            text-align: center;
+            margin: 10px;
+        }
+        .box-1{
+            order: 3;
+            background: red;
+            flex-grow: 1;
+        }
+        .box-2{
+            order: 1;
+            background: green;
+            /* align-self: center; */
+            flex-grow: 2;
+        }
+        .box-3{
+            order: 2;
+            background: yellow;
+            /* align-self: flex-end; */
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+    </div>
+    
+</body>
+</html>
+<!-- order etiketine verdiğimiz değerleri küçükten büyüğe sağda en küçük olacak şekilde container a sıralar.
+    //justify-content ile container'ımıza verdiğimiz özelliği tek bir box için değiştirmek istersek o box'ın classına align-self etiketi ile
+    istediğimiz eksende konumlandırabiliriz.,
+    //box'larımızı container'ı eninde doldurmasını istersek flex-grow etiketini kullanırız. Bu etikete sayısal değerler veriyoruz. Örneğin
+    3 box a sırasıyla 1-2-3 değerlerini verdik. kutu 1+2+3=6 eşit parçaya bölünür ve verdiğimiz değere göre o parçada yer kaplar.
+    örneğin 2 değerini verdiğimiz box containerın 2/6 'sini kaplar.
+    //eğer sadece bir kutumuzun boşlukları doldurmasını istiyorsak sadece o kutuya flex-grow özelliğini ekleriz.-->
+    
