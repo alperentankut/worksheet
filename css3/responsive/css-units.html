@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Units</title>
+    <style>
+        /* html{
+            font-size: 20px;
+        } */
+        /* div{
+            font-size: 1.5em;
+        } */
+        /* p{
+            font-size: 50%;
+            /*padding: 1.5em; burdaki değer divden değil direk p nin değerine göre orantılıyor.
+        } */
+        /* div{
+            width: 40vw; /*burdaki vw ve vh değerleri viewportheight ve viewportwidth değerleridir. Bu da sayfanın bütün alanına oranı olarak
+            kullanımına olanak sunuyor. Sayfanın tüm width i ve height ı 100 birim olarak düşünürsek bu verdiğimiz değer o yüzdeye göre oran
+            lamamızı sağlıyor.
+            height: 40vh;
+            background-color: #a7a7a7;
+        } */
+        *{
+            padding: 0;
+            margin:0;
+        }
+        .background{
+            background: url(./background.jpg) center center no-repeat ;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            padding: 10rem;
+        }
+        h1{
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+        p{
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        @media(max-width:500px) {
+            h1{
+                margin-bottom: 0.5rem;
+                font-size: 1.5rem;
+             }
+             p{
+                 font-size: 1rem;
+                 
+             }
+        }
+            
+
+       
+        
+    </style>
+</head>
+<body>
+    <div class="background">
+        <h1>Welcome to the website</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ipsum.</p>
+
+    </div>
+</body>
+</html>
