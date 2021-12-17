@@ -1,0 +1,29 @@
+/* Bu css dosyasına genel olarak her yerde kullanacağımız css kodlarını yazıyoruz. Özetle buraya sık kullanacağımız belli başlı css kodlarını
+classlarıyla beraber yazıyoruz ve html iskeletimizde lazım oldukça bunları class olarak ekliyoruz. */
+
+/* text */
+.text-center{
+    text-align: center; /*Yazının merkezde olmasını istediğimiz durumlarda direk önceden hazırladığımız bu classı kullanabiliriz*/
+} 
+
+.heading-small{
+    font-size: 1.25rem;
+}
+.heading-medium{
+    font-size: 1.5rem;
+}
+.heading-big{
+    font-size: 1.75rem;
+}
+/* colors */
+.bg-dark-blue{
+    background-color: darkblue;
+}
+.bg-dark-gray{
+    background-color: darkgray;
+}
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
