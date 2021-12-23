@@ -11,10 +11,11 @@ a{
     text-decoration: none;
     color: white;
 }
+/* Navbar Section */
 #navbar{
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 0 0.75rem;
     height: 75px;
@@ -26,4 +27,93 @@ a{
 }
 #navbar ul li a{
     padding: 0.75rem;
+}
+#navbar ul li a:hover {
+    background: darkgray;
+    border-radius: 4px;
+    }
+/* Home Section */
+#home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-bottom: 2px solid grey;
+}
+#home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+#home .name h2{
+    margin-bottom:0.75rem ;
+}
+#home .name p{
+    opacity: 0.6;
+    font-style: italic;
+}
+/* Services */
+#Services-list{
+    color: #fff;
+    padding: 1rem;
+}
+#Services-list .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Services-list .items .item{
+    padding: 0.5rem;
+    text-align: center;
+    width: 33%;
+    
+}
+#Services-list .items .item:hover{
+    background: lightblue;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    color: darkblue;
+}
+/* Services */
+#services{
+    color: #333;
+    padding: 1rem;
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.services .service{
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.services .service .service-image{
+    margin-right: 0.5rem;
+    position: relative;
+}
+.services .service .service-image img{
+    border-radius: 4px;
+}
+.services .service .service-image span{
+    background: red;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.services .service .service-info .title{
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.services .service .service-info .description{
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+    opacity: 0.8;
+    line-height: 1.4rem;
 }

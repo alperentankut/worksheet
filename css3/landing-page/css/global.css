@@ -23,7 +23,33 @@ classlarıyla beraber yazıyoruz ve html iskeletimizde lazım oldukça bunları 
     background-color: darkgray;
 }
 /* Container */
-.container {
+.container-navbar {
     max-width: 1100px;
     margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn{
+    margin-top:1.25rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    letter-spacing: 0.2px;
+}
+.btn-primary{
+    background: darkslateblue;
+}
+.btn-primary:hover{
+    background: #fff;
+    border : 0.5px solid darkslateblue;
+    border-radius: 8px;
+    color: darkslateblue;
+}
+.btn-dark{
+    background-color:#333;
+}
+.btn-dark:hover{
+    color: #333;
+    background-color: #fff;
+    border: 0.5px solid #333;
 }

@@ -1,0 +1,24 @@
+#navbar{
+    flex-direction: column;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+    height: 75px;
+
+}
+#navbar ul li a{
+    padding-left:0.2rem;
+    padding-right: 0.2rem;
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    font-size: 0.9rem;
+}
+#Services-list .items{
+    flex-direction: column;
+}
+#Services-list .items .item{
+    width: 100%;
+}
+.services .service{
+    flex-direction: column;
+}
