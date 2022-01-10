@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+            background-color: red;
+        }
+        
+        .container {
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>JavaScript</h1>
+    </div>
+    <hr>
+    <div class="container">
+
+    </div>
+    <script>
+        // for(var i = 0; i<10; i++){
+        //     console.log("i değeri:" +i);
+        // } burdaki değerlerimiz inspectteki console da görünecektir.
+        
+        // var i=0;
+
+        // while(i < 100){
+        //     console.log("i nin değeri :" + i);
+        //     i += 2 ;
+            
+        // }
+
+        var sayilar = [1,2,3,4,5]
+        console.log("array elemanları..");
+        for(i = 0; i<sayilar.length; ++i){
+            console.log("eleman :" + sayilar[i]);
+        }
+        sayilar.forEach(function(sayi){
+            console.log("Eleman : " +sayi);
+        });
+
+
+    </script>
+</body>
+</html>
+<!-- forEach fonksiyonu içinde function etiketine yazdığımız değeri arraylerde gezdirip
+    tek tek o değere eşitler. -->

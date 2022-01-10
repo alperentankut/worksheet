@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+            background-color: red;
+        }
+        
+        .container {
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>JavaScript</h1>
+    </div>
+    <hr>
+    <div class="container">
+
+    </div>
+    <script>
+        // var a = 5;
+        // var b = 6;
+
+        // if(a != b){
+        //     console.log("Eşit Değildir.")
+        // }
+
+        // if(2 === "2"){
+        //     console.log("Eşit.");
+        // };   
+        // normalde string ve int değerler eşit olamaz fakat js dilinde tırnak içindeki string int değere eşit olursa eşit kabul ediliyor.
+        // bunu önüne geçmek için 3 tane eşittir işareti koyuyoruz ve veri tiplerinin de eşitliği kontrol edilmiş oluyor
+        if (2 == 2 && "Alperen" == "Ali" ){
+            console.log("Hayır");
+        // && operatörü kullanılan kod dizilerinde && operatörü kullanılan bütün değerler true olmalıdır. Eğer bir tanesi bile false olursa 
+        // bizim değerimiz false olur
+        }
+        if (2 == 2 || "Alperen" == "Ali" ){
+            console.log("Evet");
+        }
+        // || or operatöründe durum && operatörünün tam tersidir. Sadece bir tanesinin true olması sonucun true olması için yeterlidir
+        if ( ! (3<4)){
+            console.log("Doğru");
+        }
+        // Burdaki ! not operatörü de değeri ne ise onu terse çeviriyor. Yani değer true ise false , false ise true yapıyor.
+    </script>
+    
+</body>
+</html>
