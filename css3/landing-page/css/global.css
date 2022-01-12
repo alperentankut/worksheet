@@ -22,6 +22,9 @@ classlarıyla beraber yazıyoruz ve html iskeletimizde lazım oldukça bunları 
 .bg-dark-gray{
     background-color: darkgray;
 }
+.bg-dark-brown{
+    background-color: rgb(165, 42, 99);
+}
 /* Container */
 .container-navbar {
     max-width: 1100px;
@@ -40,6 +43,8 @@ classlarıyla beraber yazıyoruz ve html iskeletimizde lazım oldukça bunları 
 }
 .btn-primary{
     background: darkslateblue;
+    border : 0.5px solid darkslateblue;
+    border-radius: 8px;
 }
 .btn-primary:hover{
     background: #fff;

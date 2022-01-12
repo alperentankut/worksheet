@@ -57,17 +57,23 @@ a{
 /* Services */
 #Services-list{
     color: #fff;
-    padding: 1rem;
+    padding: 1rem ;
 }
 #Services-list .items{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    
+    
 }
 #Services-list .items .item{
     padding: 0.5rem;
     text-align: center;
     width: 33%;
+    border: 1px solid rgb(165, 42, 99);
+    border-radius: 4px;
+    
     
 }
 #Services-list .items .item:hover{
@@ -75,6 +81,11 @@ a{
     border: 1px solid lightblue;
     border-radius: 4px;
     color: darkblue;
+    width: 33%;
+    padding: 0.5rem;
+    
+    
+    
 }
 /* Services */
 #services{
