@@ -28,15 +28,31 @@
 
     </div>
     <script>
-        var calisan = new Object();
+        // var calisan = new Object();
 
-        calisan.isim = "Alperen";
-        calisan.soyisim = "Tankut";
-        calisan.İsimBilgileri = function(){
-            return  "İsimBilgileri : " + this.isim + " " + this.soyisim
+        // calisan.isim = "Alperen";
+        // calisan.soyisim = "Tankut";
+        // calisan.İsimBilgileri = function(){
+        //     return  "İsimBilgileri : " + this.isim + " " + this.soyisim
 
-        };
-        console.log(calisan.İsimBilgileri());
+        // };
+        // console.log(calisan.İsimBilgileri());
+
+
+        function Calisan (isim,soyisim,numara){
+            this.isim = isim;
+            this.soyisim = soyisim;
+            this.numara = numara;
+            this.BilgileriGoster = function(){
+                return "İsim : " + this.isim + "\nSoyisim : " + this.soyisim + "\nNumara : " + this.numara
+            }
+        }
+        
+        var calisan1 = new Calisan("Alperen","Tankut",1233);
+        var calisan2 = new Calisan("Oguzcan","Budumlu",2234);
+
+        console.log(calisan1.BilgileriGoster());
+        console.log(calisan2.BilgileriGoster());
     </script>
     
 </body>
