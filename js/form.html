@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+            background-color: red;
+        }
+        
+        .container {
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>JavaScript</h1>
+    </div>
+    <hr>
+    <div class="container"> 
+
+        <form name="form1" action="gonder.php" method="POST" onsubmit="return dogrula()">
+
+            <input type="text" name="isim">
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+    <script>
+        function dogrula(){
+            var form = document.forms["form1"];
+            var deger = form["isim"];
+
+            if(deger == "");{
+            alert("İsim alanı boş bırakılamaz..");
+            return false;
+            }
+            return true;
+        
+    }
+
+
+    </script>
+
+    
+</body>
+</html>
