@@ -27,7 +27,7 @@
     <div class="container">
         <p id="para1">Paragraf 1</p>
     <button onclick="RenkDegistir()">Tıkla</button>
-    <!-- <button onclick="tikla(this)">Tıkla</button> -->
+    <button onmouseover="MouseOver()" onmouseout="MouseOut()">Tıkla</button>
 
     
     </div>
@@ -37,9 +37,18 @@
 
         // }
 
-        function RenkDegistir(){
+         function RenkDegistir(){
             var element = document.getElementById("para1");
             element.style.color = "green";
+         }
+
+        function MouseOver(){
+            var element = document.getElementById("para1");
+            element.innerHTML = "Mouse over effecti";
+        }
+        function MouseOut(){
+            var element = document.getElementById("para1");
+            element.innerHTML = "Mouse out effecti";
         }
 
     </script>
