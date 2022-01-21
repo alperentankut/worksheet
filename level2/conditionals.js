@@ -1,12 +1,12 @@
 var not = 50;
 
 if (not < 40) {
-    console.log("Kaldınız")
+    console.log("Kaldınız..")
 }
 else if(not == 40){
-    console.log("Büte kaldınız")
+    console.log("Büte kaldınız..")
 } 
 else {
-    console.log("geçtiniz..")
+    console.log("Geçtiniz..")
 }
 
