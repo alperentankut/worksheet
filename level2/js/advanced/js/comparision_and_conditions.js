@@ -98,3 +98,4 @@ const number = 100;
 
 if (number === 100) console.log("Sayı 100"); // eğer if bloğumuzda tek bir işlem yapacaksak süslü parantezleri kullanmadan bu şekilde bir yazım
 //yapabiliriz.
+else console.log ("sayı 100 değil") //aynı şekilde else içinde geçerli.
