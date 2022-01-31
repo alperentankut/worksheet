@@ -45,7 +45,7 @@
 //burada fonksiyonumuz bir değişkene eşit. Değişkeni yazdığımız zaman direk fonksiyonumuz çalışıyor.
 
 
-// ## İmmediately İnvoked Funcion Expression (IIFE) ##
+// ## Immediately İnvoked Funcion Expression (IIFE) ##
 
 // (function(name){
 //     console.log("Merhaba " + name)
