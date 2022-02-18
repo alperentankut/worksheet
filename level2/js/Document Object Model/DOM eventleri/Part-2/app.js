@@ -6,7 +6,9 @@ const todoInput = document.querySelector("#todo");
 todoInput.addEventListener("keyup" , change);
 
 function change(e){
-    header.textContent = e.target.value; //Burdaki işlemimizde yazdığımız harfleri dinamik olarak headerımıza ekliyor.
+    header.textContent = e.target.value; //Burdaki işlemimizde yazdığımız harfleri dinamik olarak headerımıza ekliyor. İlk başta sadece e.target dersek eventimizin nerde
+    //oluştuğunu görebiliyoruz. .value ekledğimiz zaman bu elementin içindeki değeri alıyoruz. Yani bir input alanından değer almak istiyorsak x.target.value şeklinde
+    //yazmamız yeterli.
     // console.log(e.target.value); 
 }
 
