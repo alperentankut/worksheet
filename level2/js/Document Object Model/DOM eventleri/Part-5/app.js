@@ -18,7 +18,8 @@
 
 //!!! ## Bizim 3 tane iç içe divimiz olsun ve bu divlerin her birine ayrı ayrı click eventi atamış olalım. Biz en içteki divimize tıkladığımızda
 //içteki divimize verdiğimiz event çalışıyor. Ama bu divimiz diğer iki divin içinde olduğu için diğer kapsayıcı divlerimize verdiğimiz
-//eventlerde çalışmış oluyor. Yani içerden dışarıya doğru bir akış , baloncuklanma gerçekleşiyor. ## !!!
+//eventlerde çalışmış oluyor. Yani içerden dışarıya doğru bir akış , baloncuklanma gerçekleşiyor. Eğer biz bu baloncuklanmanın olmasını
+//istemezsek e.stopPropagation şeklinde bir kodla durdurabiliriz ## !!!
 
 
 //--Event Capturing veya delegation--
