@@ -73,8 +73,13 @@ function addTodo(e){
 
 
     e.preventDefault()
-}
+};
 
 //Bizim local storage da bir arrayden değer almamız için önce o arrayin olması gerekiyor
 //o array yoksa önce onu oluşturup sonra o değerimizi alıyoruz.
+
+//## fonksiyonda öncelikle value değeriyle girilen inputu alıyoruz. Sonrasında arrayi oluşturmak için todos değişkenine bir
+//if yazıyoruz. Bu ifte eğer local storage da todos değerimiz yoksa boş bi array olarak cevap alacağımızı söylüyoruz. Eğer todos değeri
+// var ise todos arrayini çağırıyoruz. Çağırdıktan sonra her girdiğimiz değeri todos.push komutuyla bu arraye ekliyoruz. En son setItem
+//ile bu arrayi oluşturuyoruz.##
 
