@@ -28,6 +28,7 @@ function addTodo(e){
     }
     else{
         addTodoToUI(newTodo); //girdiğimiz inputu dinamik olarak sayfaya eklemek için yazdık. UI(user interface)
+        showAlert("success" , "todo başarıyla eklendi..")
     }
 
 
