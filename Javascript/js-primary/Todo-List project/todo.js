@@ -12,7 +12,17 @@ eventListeners();
 function eventListeners(){  //Tüm event listenerlar
 
     form.addEventListener("submit" , addTodo);
+    document.addEventListener("DOMContentLoaded" , loadAllTodosUI);
+}
 
+function loadAllTodosUI(){
+    let todos = getTodosFromStorage();
+
+    todos.forEach(function(todo){
+        addTodoToUI(todo);
+
+
+    })
 }
 
 function addTodo(e){
@@ -20,14 +30,14 @@ function addTodo(e){
     const newTodo = todoInput.value.trim(); //burdaki trim inputun başına ve sonuna koyulan boşlukları siliyor.
     
     if(newTodo === ""){
-            /*<div class="alert alert-danger" role="alert">
-            A simple danger alert—check it out!
-            </div>*/
+           
         
         showAlert("danger" , "Lütfen bir todo giriniz"); //type ı danger veya success mi onu belirleyecek
     }
     else{
         addTodoToUI(newTodo); //girdiğimiz inputu dinamik olarak sayfaya eklemek için yazdık. UI(user interface)
+        addTodoToStorage(newTodo);
+
         showAlert("success" , "todo başarıyla eklendi..")
     }
 
@@ -37,6 +47,28 @@ function addTodo(e){
     
     e.preventDefault();
 }
+
+function getTodosFromStorage(){ //Storage dan tüm todoları almak.
+    let todos ;
+    if(localStorage.getItem("todos") === null){
+        todos = []
+    }
+
+    else{
+        todos =JSON.parse(localStorage.getItem("todos"));
+    }
+    return todos;
+}
+
+
+function addTodoToStorage(newTodo){
+    let todos = getTodosFromStorage();
+
+    todos.push(newTodo);
+
+    localStorage.setItem("todos" , JSON.stringify(todos));
+};
+
 function showAlert(type,message){
     const alert = document.createElement("div");
     alert.className = `alert alert-${type}`;
