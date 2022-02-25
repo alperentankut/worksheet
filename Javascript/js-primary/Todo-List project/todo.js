@@ -13,6 +13,7 @@ function eventListeners(){  //Tüm event listenerlar
 
     form.addEventListener("submit" , addTodo);
     document.addEventListener("DOMContentLoaded" , loadAllTodosUI);
+    document.addEventListener("click" , deleteTodo);
 }
 
 function loadAllTodosUI(){
@@ -23,6 +24,29 @@ function loadAllTodosUI(){
 
 
     })
+}
+
+function deleteTodo(e){
+    if(e.target.className === "fa fa-remove"){
+        e.target.parentElement.parentElement.remove();
+        deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
+        showAlert("success" , "todo başarıyla silindi")
+    }
+}
+
+function deleteTodoFromStorage (deletetodo){
+
+    let todos = getTodosFromStorage();
+
+    todos.forEach(function(todo , index){
+
+        if(todo === deletetodo){
+            todos.splice(index , 1); // o indexten itibaren 1 obje siliyoruz.
+        }
+
+    });
+    localStorage.setItem("todos" , JSON.stringify(todos))
+
 }
 
 function addTodo(e){
