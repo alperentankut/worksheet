@@ -40,7 +40,7 @@
 
 // localStorage.setItem("todos" , JSON.stringify(todos));
 
-// //Burdaki JSON stringi array gibi yazmamızı sağlıyor.
+// //Burdaki JSON , stringi array gibi yazmamızı sağlıyor.
 
 // const value = JSON.parse(localStorage.getItem("todos"))
 

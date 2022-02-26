@@ -21,7 +21,7 @@ const salary = 5000;
 
 function a(){
     return "Deneme"
-}
+};
 
 const html = `
         <ul>
