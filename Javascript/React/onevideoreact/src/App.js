@@ -18,13 +18,13 @@ class App extends Component {
         },
         {
           id : 2,
-          name : "Alperen",
-          email : "tankut.alperen1@gmail.com"
+          name : "Oguzcan Budumlu",
+          email : "obudumlu@gmail.com"
         },
         {
           id : 3,
-          name : "Tankut",
-          email : "tankut.alperen2@gmail.com"
+          name : "Aykut Tekkanat",
+          email : "aykut_fb@gmail.com"
         },
       ]
     };
@@ -37,7 +37,7 @@ class App extends Component {
         <hr />
         <AddUser />
         <hr/>
-        <Users />
+        <Users users={this.state.users}/>
       </div>
     )
   }
