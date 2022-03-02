@@ -11,6 +11,9 @@ class User extends Component{
     // event her zaman en son yazılır.
 
         onDeleteClick(id,event) {
+            const {deleteUser} = this.props;
+
+            deleteUser(id);
          console.log(this);   
         }
     render(){
@@ -26,6 +29,6 @@ class User extends Component{
             </tr>
         )
     }
-}
+};
 
 export default User;

@@ -6,6 +6,8 @@ import Users from "./components/Users";
 
 
 class App extends Component {
+  
+  
   constructor(props) {
     super(props);
 
@@ -28,6 +30,17 @@ class App extends Component {
         },
       ]
     };
+    this.deleteUser = this.deleteUser.bind(this);
+  }
+  deleteUser(id){
+    let updatedUsers = this.state.users;
+
+    updatedUsers = updatedUsers.filter(user => user.id !== id); 
+    //Yukardaki kod dizisinde gelen id numarası dışındakileri tut demek istedik.
+    //--State Direct Immutable--
+    this.setState({
+      users : updatedUsers
+    })
   }
   
   render() {
@@ -37,7 +50,7 @@ class App extends Component {
         <hr />
         <AddUser />
         <hr/>
-        <Users users={this.state.users}/>
+        <Users  deleteUser={this.deleteUser} users={this.state.users}/>
       </div>
     )
   }
