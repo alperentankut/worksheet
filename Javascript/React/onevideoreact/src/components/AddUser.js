@@ -7,15 +7,36 @@ state = {
 
     name : "",
     email : ""
+};
+onNameChange(e){
+    this.setState({
+       [e.target.name] : e.target.value
+    });
 }
+onEmailChange(e){
+    this.setState({
+        [e.target.name] : e.target.value
+     });
+}
+    onAddSubmit(e){
+        const {addUser} = this.props;
+        const {name,email} = this.state;
+        const newUser = {
+            id : Math.random(),
+            name : name,
+            email : email
+        };
+        addUser(newUser);
 
+        e.preventDefault();
+    }
     render() {
             const {name , email} = this.state;
         return (
             <div className="card">
                 <h4 className="card-header">Add New User</h4>
                 <div className="card-body">
-                    <form className="d-grid gap-2">
+                    <form onSubmit={this.onAddSubmit.bind(this)} className="d-grid gap-2">
                         <div className="form-group">
                             <label htmlFor="name"></label>
                             <input 
@@ -24,7 +45,8 @@ state = {
                             id="name" 
                             placeholder="Enter Name" 
                             className="form-control"
-                            value = {name}/>
+                            value = {name}
+                            onChange = {this.onNameChange.bind(this)}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email"></label>
@@ -34,7 +56,8 @@ state = {
                             id="email" 
                             placeholder="Enter email" 
                             className="form-control"
-                            value = {email}/>
+                            value = {email}
+                            onChange = {this.onEmailChange.bind(this)}/>
                         </div>
                         
                         <button type="submit" className="btn btn-danger">Add New User</button>

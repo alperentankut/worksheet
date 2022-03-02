@@ -1,3 +1,4 @@
+import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import React, { Component } from "react";
 import AddUser from "./components/AddUser";
 import Users from "./components/Users";
@@ -31,6 +32,17 @@ class App extends Component {
       ]
     };
     this.deleteUser = this.deleteUser.bind(this);
+    this.addUser = this.addUser.bind(this);
+  }
+  addUser(newUser) {
+
+    let updatedUsers = this.state.users;
+
+    updatedUsers.push(newUser);
+
+    this.setState({
+      users : updatedUsers
+    });
   }
   deleteUser(id){
     let updatedUsers = this.state.users;
@@ -44,11 +56,12 @@ class App extends Component {
   }
   
   render() {
+
     return (
       <div className="container">
         <h4>User app</h4>
         <hr />
-        <AddUser />
+        <AddUser addUser = {this.addUser} />
         <hr/>
         <Users  deleteUser={this.deleteUser} users={this.state.users}/>
       </div>
