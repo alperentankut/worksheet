@@ -14,8 +14,30 @@ function eventListeners(){  //Tüm event listenerlar
     form.addEventListener("submit" , addTodo);
     document.addEventListener("DOMContentLoaded" , loadAllTodosUI);
     document.addEventListener("click" , deleteTodo);
+    filter.addEventListener("keyup" , filterTodos);
 }
+function filterTodos(e){
+    const filterValue = e.target.value.toLowerCase(); 
+    const listItems = document.querySelectorAll(".list-group-item");
 
+    listItems.forEach(function(listItem){
+        const text = listItem.textContent.toLowerCase();
+        if(text.indexOf(filterValue)=== -1){
+            //Bulamadı
+            listItem.setAttribute("style","display : none !important") //-1 e eşitse sayfada gösterme dedik.
+        } 
+        else {
+            listItem.setAttribute("style" , "display : block");
+        }
+
+
+    });
+//Yukardaki kodu yazdığımızda aradıklarımızın dışındakiler kaybolmuyor. Bu da
+//Bootstrap kaynaklı bir durum. Class olan d-flex burdaki none ı baskılıyor. yani
+//d-flexin içinde important olarak display block özelliği bulunuyor. Bunu engellemek
+//için !important etiketini kullanıyoruz
+
+}
 function loadAllTodosUI(){
     let todos = getTodosFromStorage();
 
