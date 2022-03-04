@@ -14,7 +14,21 @@ function eventListeners(){  //Tüm event listenerlar
     form.addEventListener("submit" , addTodo);
     document.addEventListener("DOMContentLoaded" , loadAllTodosUI);
     document.addEventListener("click" , deleteTodo);
-    filter.addEventListener("keyup" , filterTodos);
+    filter.addEventListener("keyup" , filterTodos); 
+    clearButton.addEventListener("click" , clearAllTodos)
+}
+
+function clearAllTodos(e){
+   if (confirm ("Tümünü silmek istediğinizden emin misiiniz?")){
+        //Arayüzden todoları temizleme
+        // todoList.innerHTML = ""; //Yavaş yöntem
+        while(todoList.firstElementChild != null) {
+            todoList.removeChild(todoList.firstElementChild);
+        };
+        //Yukardaki while döngüsü false olana kadar devam edecek.
+        localStorage.removeItem("todos");
+}
+   
 }
 function filterTodos(e){
     const filterValue = e.target.value.toLowerCase(); 
