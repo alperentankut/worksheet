@@ -14,6 +14,7 @@ eventListeners();
 
 function eventListeners(){
     form.addEventListener("submit" , addFilm);
+    
 }
 
 function addFilm(e){
@@ -31,11 +32,14 @@ function addFilm(e){
 
         const newFilm = new Film(title , director , url);
 
-        ui.addFilmToUI(newFilm); //Arrayüze film ekleme
+        ui.addFilmToUI(newFilm); //Arayüze film ekleme
 
     }
     
-    
+
+    ui.clearInputs(titleElement,directorElement,urlElement);
     
     e.preventDefault();
+    
+    
 }
