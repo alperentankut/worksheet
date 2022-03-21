@@ -25,6 +25,7 @@ function addFilm(e){
 
     if (title === "" || director === "" || url === ""){
         //Hata
+        ui.displayMessage("Tüm alanları doldurun..." , "danger")
     }
     else {
 
@@ -33,6 +34,7 @@ function addFilm(e){
         const newFilm = new Film(title , director , url);
 
         ui.addFilmToUI(newFilm); //Arayüze film ekleme
+        ui.displayMessage("Film başarıyla eklendi.." , "success")
 
     }
     
