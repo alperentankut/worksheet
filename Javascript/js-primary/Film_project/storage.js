@@ -15,13 +15,13 @@ Storage.prototype.addFilmToStorage = function(newFilm){
 //JSON.parse ile biz string olarak aldığımız değeri arraye çevirdik
 
 Storage.prototype.getFilmsFromStorage = function(){
-    let film;
+    let films;
 
-    if (localStorage.getItem("film") === null){
-        film = [];
+    if (localStorage.getItem("films") === null){
+        films = [];
     }
     else {
-        filmss = JSON.parse(localStorage.getItem("film"));
+        films = JSON.parse(localStorage.getItem("films"));
     }
-    return film;
+    return films;
 }
