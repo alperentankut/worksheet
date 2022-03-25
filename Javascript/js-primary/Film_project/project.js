@@ -62,6 +62,7 @@ function deleteFilm(e){
         ui.deleteFilmFromUI(e.target)
         storage.deleteFilmFromStorage(e.target.parentElement.previousElementSibling.previousElementSibling.textContent)
         
+        ui.displayMessage("Silme işlemi başarılı.." , "success")
     }
 
 }
