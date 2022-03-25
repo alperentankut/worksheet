@@ -70,3 +70,13 @@ UI.prototype.deleteFilmFromUI = function(element){
 
 
 }
+
+UI.prototype.clearAllFilmsFromUI = function(){
+    const filmList = document.getElementById("films");
+
+    // filmList.innerHTML = ""; bu yöntem kullanılabilir fakat yavaş bir yöntem
+
+    while(filmList.firstElementChild !== null){ //Child olduğu sürece demek
+        filmList.firstElementChild.remove()
+    }
+}
