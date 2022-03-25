@@ -46,6 +46,7 @@ UI.prototype.displayMessage = function(message,type){
     setTimeout(function(){
         div.remove();
     },1500);
+    
 }
 
 UI.prototype.loadAllFilms = function(films){
@@ -60,5 +61,12 @@ UI.prototype.loadAllFilms = function(films){
             <td><a href="#" id = "delete-film" class = "btn btn-danger">Filmi Sil</a></td>
         </tr>
         `
+       
     })
+}
+
+UI.prototype.deleteFilmFromUI = function(element){
+    element.parentElement.parentElement.remove();
+
+
 }
