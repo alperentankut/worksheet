@@ -1,0 +1,20 @@
+[
+    {
+        "name":"Alperen Tankut",
+        "department" : "Fizik Tedavi",
+        "salary" : 4500
+    },
+
+    {
+        "name" : "Oğuzcan Budumlu",
+        "department" : "Yazılım",
+        "salary" : 20000
+    },
+
+    {
+        "name" : "Aykut Tekkanat",
+        "department" : "Beden Eğitimi",
+        "salary" : 5000
+    }
+]
+
