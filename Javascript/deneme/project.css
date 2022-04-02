@@ -6,8 +6,8 @@
 }
 
 .head{
-    width: 300px;
-    height: 200px;
+    width: 150px;
+    height: 100px;
     background:#b9830e;
     border-radius: 100%;
     position: relative;
@@ -15,8 +15,8 @@
 }
 
 .ear{
-    width : 50px;
-    height: 50px;
+    width : 25px;
+    height: 25px;
     border-radius : 100%;
     position: absolute;
     border : 3px solid #000;
@@ -24,31 +24,31 @@
     z-index : -1;
 }
 .ear:nth-child(1){
-    top:10px;
+    top:5px;
 } 
 .ear:nth-child(2){
-    top:10px;
+    top:5px;
     right: 0;
 } 
 .eye{
-    width: 15px;
-    height: 25px;
+    width: 7.5px;
+    height: 12.5px;
     background: #000;
     border-radius: 100%;
     position: absolute;
     animation: eyes 15s ease-in-out infinite;
 }
 .eye:nth-child(3){
-    top: 90px;
-    left : 80px;
+    top: 45px;
+    left : 40px;
 }
 .eye:nth-child(4){
-    top: 90px;
-    right : 80px;
+    top: 45px;
+    right : 40px;
 }
 .nose{
-    width : 60px;
-    height: 40px;
+    width : 30px;
+    height: 20px;
     border-radius: 100%;
     background: #000;
     position: absolute;
@@ -59,8 +59,8 @@
 }
 
 .mouth{
-    width : 10px;
-    height: 40px;
+    width : 5px;
+    height: 20px;
     background:#000;
     left : 50%;
     transform: translate(-50%);
@@ -69,8 +69,8 @@
 }
 .eye{
     position: absolute;
-    width : 22px;
-    height: 22px;
+    width : 11px;
+    height: 11px;
     top : 42%;
     background: #fff;
     border-radius: 50%;
@@ -81,12 +81,12 @@
     position: absolute;
     content : "";
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     background: #000;
     border-radius: 50%;
-    top : 9px;
-    left : 9px;
+    top : 4.5px;
+    left : 4.5px;
     animation: pupils 15s ease-in-out infinite;
 }
 @keyframes eyes {
@@ -99,13 +99,13 @@
 }
 @keyframes pupils{
     0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%{
-        top:9px;
-        left:9px;
+        top:4,5px;
+        left:4,5px;
         transform: scaleY(1);
     }
     40%{
-        top:4px;
-        left:4px;
+        top:2px;
+        left:2px;
     }
     24%, 66%, 90%{
         transform: scaleY(2);
