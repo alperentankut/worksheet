@@ -1,0 +1,113 @@
+.containers{
+    position: absolute;
+    left : 50%;
+    top: 15%;
+    transform: translate(-50% , -50%);
+}
+
+.head{
+    width: 300px;
+    height: 200px;
+    background:#b9830e;
+    border-radius: 100%;
+    position: relative;
+    border : 3px solid #000;
+}
+
+.ear{
+    width : 50px;
+    height: 50px;
+    border-radius : 100%;
+    position: absolute;
+    border : 3px solid #000;
+    background: #b9830e;
+    z-index : -1;
+}
+.ear:nth-child(1){
+    top:10px;
+} 
+.ear:nth-child(2){
+    top:10px;
+    right: 0;
+} 
+.eye{
+    width: 15px;
+    height: 25px;
+    background: #000;
+    border-radius: 100%;
+    position: absolute;
+    animation: eyes 15s ease-in-out infinite;
+}
+.eye:nth-child(3){
+    top: 90px;
+    left : 80px;
+}
+.eye:nth-child(4){
+    top: 90px;
+    right : 80px;
+}
+.nose{
+    width : 60px;
+    height: 40px;
+    border-radius: 100%;
+    background: #000;
+    position: absolute;
+    top : 65%;
+    left : 50%;
+    transform: translate(-50%);
+    
+}
+
+.mouth{
+    width : 10px;
+    height: 40px;
+    background:#000;
+    left : 50%;
+    transform: translate(-50%);
+    bottom : 0;
+    position: absolute;
+}
+.eye{
+    position: absolute;
+    width : 22px;
+    height: 22px;
+    top : 42%;
+    background: #fff;
+    border-radius: 50%;
+    animation: eyes 15s ease-in-out infinite;
+}
+
+.eye:before{
+    position: absolute;
+    content : "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    top : 9px;
+    left : 9px;
+    animation: pupils 15s ease-in-out infinite;
+}
+@keyframes eyes {
+    0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%{
+        transform: scaleY(1);
+    }
+    24%, 66%, 90%{
+        transform: scaleY(0);
+    }
+}
+@keyframes pupils{
+    0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%{
+        top:9px;
+        left:9px;
+        transform: scaleY(1);
+    }
+    40%{
+        top:4px;
+        left:4px;
+    }
+    24%, 66%, 90%{
+        transform: scaleY(2);
+    }
+}
