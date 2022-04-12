@@ -61,7 +61,7 @@ emp.showInfos()
 
 
 //extends anahtar kelimesiyle Person constructor'ının 
-//tüm metodlarını Empolyee' e  geçirmiş oluyoruz.
+//tüm metodlarını Employee' e  geçirmiş oluyoruz.
  
 //Bizim en üst classımız olan person Superclass veya Baseclass ismiyle
 //kullanılabilir.
