@@ -101,10 +101,11 @@ const langs = ["Javascript" , "Python" , "C++"] ;
 
 //## forEach ##
 
-// langs.forEach(function(lang,index){
-//     console.log(lang,index)
+langs.forEach(function(lang,index){
+    
+    console.log(lang,index)
 
-// });
+});
 
 //forEach ile yukardaki for döngüsüyle yaptığımız işlemin aynısını yaptık. forEach arraydeki tüm elemanlarda gezin komutunu veriyor.
 //bunların adı callback fonksiyonlarıdır. Bunların kaçıncı index olduğunu yazdırmak istersek ,index şeklinde ekleme yaparız.
@@ -135,15 +136,15 @@ const langs = ["Javascript" , "Python" , "C++"] ;
 
 // ## for in ##
 
-const user = {
-    name : "Alperen",
-    age : 25
-};
+// const user = {
+//     name : "Alperen",
+//     age : 25
+// };
 
-for (let key in user){
+// for (let key in user){
 
-    console.log(key,user[key]);
-}
+//     console.log(key,user[key]);
+// }
 
 //burda oluşturduğumuz objenin değerlerini yazdırıyoruz. Yukarda ilk başta name ve age değerlerini yazdıracak. Biz bunların karşılık geldiği
 //değerleri de yazdırmak istersek user[key] şeklinde bi ekleme yaparız. Yani in komutu objenin içindeki değerleri yazdırıyor.
