@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./interface.css">
+    <script src="https://kit.fontawesome.com/90046202ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    </style>
+    <title>E-Ticaret</title>
+
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar d-flex flex-column" style="background-color:black">
+            <div class="container justify-content-between top-title">
+                <div><p style="color: white; margin-top: 20px;">Tüm ürünlerde %10 sepet indirimi</p>
+                </div>
+                <h1 style="font-weight: bolder; color: black;">BlualP</h1>
+                <div class="navbar-account d-flex justify-content-between">
+                    <div><i style="color:white" class="fa-solid fa-arrow-right-to-bracket"></i><a style="border-radius: 4px; height: 2rem; text-decoration: none; color: white; padding: 5px;" href="#">Giriş Yap</a></div>
+                    <div><i style="color:white;" class="fa-solid fa-user-plus"></i><a style="border-radius: 4px; height: 2rem; text-decoration: none; color: white; padding: 5px" href="#">Kaydol</a></div>
+                    <div><i style="color:white;" class="fa-solid fa-basket-shopping"></i><a style="border-radius: 4px; height: 2rem; text-decoration: none; color: white; padding: 5px" href="#">Sepetim</a></div>
+                </div>
+            </div>
+                <div class="container justify-content-around input-group mt-4">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >Tüm Kategoriler</button>
+                    <ul class="dropdown-menu">
+                         <li><a class="dropdown-item" href="#"> Ana Sayfa</a></li>
+                         <li><a class="dropdown-item" href="#"> Elektronik</a></li>
+                         <li><a class="dropdown-item" href="#"> Ev Elektroniği</a></li>
+                         <li><a class="dropdown-item" href="#"> Yaşam</a></li>
+                         <li><a class="dropdown-item" href="#"> Giyim</a></li>
+                    </ul>
+                        <input class="form-control" type="text" name="search" id="top-search" placeholder="Arama" style="text-align:center; margin-top: px;">
+                        <button class="btn btn-warning" type="button" >Arama</button>
+                </div>
+
+            <div id="navbar-categories" class="navbar-btn-group d-flex">
+                <button style="border-radius: 15px;" class="btn">Ana Sayfa</button>
+                <button style="border-radius: 15px;" class="btn">Tüm Kategoriler</button>
+                <button style="border-radius: 15px;" class="btn">Elektronik</button>
+                <button style="border-radius: 15px;" class="btn">Ev Elektroniği</button>
+                <button style="border-radius: 15px;" class="btn">Bebek, Oyuncak</button>
+                <button style="border-radius: 15px;" class="btn">Giyim</button>
+                <button style="border-radius: 15px;" class="btn">Otomotiv</button>
+            </div>
+        </nav>
+        <!-- End of navbar -->
+    </header>
+
+    <section id="section-1">
+        <div class="navbar-line">
+            <div style="background-color: aqua;" class="line-element"></div>
+            <div style="background-color: orange;" class="line-element"></div>
+            <div style="background-color: blue;" class="line-element"></div>
+            <div style="background-color: white;" class="line-element"></div>
+            <div style="background-color: purple;" class="line-element"></div>
+            <div style="background-color: brown " class="line-element"></div>
+            <div style="background-color: indigo;" class="line-element"></div>
+            <div style="background-color: green;" class="line-element"></div>
+
+        </div>
+
+        
+        <div id="med-categories">
+            <button class="btn">Ev & Yaşam</button>
+            <button class="btn">Hobi & Bahçe</button>
+            <button class="btn">Spor & Outdoor</button>
+            <button class="btn">Giyilebilir Teknoloji</button>
+            <button class="btn">Yapı Market</button>
+            <button class="btn">Market</button>
+        </div>
+
+        <div class="med-visual-sector">
+
+        </div>
+
+
+
+        <!-- <div class="med-content" style="color:black;">
+            <div><i class="fa-solid fa-truck"></i>100 TL ve Üzeri Ücretsiz Kargo</div>
+            <div><i class="fa-solid fa-phone-plus"></i>7/24 Destek Hattı</div>
+            <div><i class="fa-solid fa-arrow-rotate-left"></i>15 Gün İçinde İade</div>
+            <div><i class="fa-solid fa-coins"></i>En Ucuz Fiyat Garantisi</div>
+        </div> -->
+
+    </section>
+
+    <section id="section-2">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+
+<script src="./app.js"></script>
+</body>
+</html>
