@@ -10,7 +10,7 @@ function subFun(e){
 
     e.preventDefault(); //bu kodu yazdığımızda normalde formumuzun default özelliği olan sayfa yenilemesini engellemiş oluyoruz. Bunu işlemlerimizin el altında kullanmamız
     //bizim için daha güvenli olacaktır.
-}
+};
 
 //Yukardaki fonksiyon çalıştığında console da Gönderildi yazısı çok kısa bir süre görünüp kayboluyor. Bunun sebebi bu bi form olduğu için submit ettikten sonra hemen
 //sayfamız yenileniyor.
