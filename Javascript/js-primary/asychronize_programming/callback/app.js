@@ -1,4 +1,4 @@
-// Callbaack Fonksiyonlar
+// Callback Fonksiyonlar
 
 
 // const langs = ["Pyhton" , "Java" , "C++"];
