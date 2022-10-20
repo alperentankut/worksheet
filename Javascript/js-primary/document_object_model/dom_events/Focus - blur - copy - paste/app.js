@@ -4,6 +4,8 @@ const filter = document.getElementById("filter");
 //  console.log("Sayfa Yüklendi..")
 //});
 
+//DOMContentLoaded sayfanın açıldığı andan sayfa yüklemesi bitene kadar geçen süreyi yansıtır.
+
 //DOMContentLoaded sayfa yüklenmesi bittiğinde çalışan bir event.
 
 
