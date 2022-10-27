@@ -20,9 +20,9 @@ console.log(emp2)
 //Biz metodlarımızı prototype 'e (constructor) yazarsak daha avantajlı oluruz. Çünkü
 //biz constructor a yazdığımızda o metodu her çağırdığımızda bi kere kullanmış oluyoruz.
 //eğer constructor a değil de objeye yazarsak her yeni objemizde birbirinin kopyası
-//metodlarımız olacak. Ama bu metodu constructor a yazarsak dire constructor'ımızın
+//metodlarımız olacak. Ama bu metodu constructor a yazarsak direk constructor'ımızın
 //prototype'inde olacak ve her objemizde prototype den çağıracağız. Biz 100
 //tane o metodu kullandığımız obje oluştursak da bellekte sadece 1 tane olduğu için
 //işlem kalabalığı olmuyor. Ama bunları objeye yazarsak her objede bellekte ekstra 
 //yer kaplayacak. Yani özetle belleğimizi gereksiz yere işgal etmiyoruz. Bunu da yukar-
-//ıdaki employee.prototype ile yazdığımız komutla yapıyoruz.
+//ıdaki Employee.prototype ile yazdığımız komutla yapıyoruz.
