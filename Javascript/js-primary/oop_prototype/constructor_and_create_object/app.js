@@ -1,18 +1,18 @@
 
-// const emp1 = { //Object Literal
-//     name : "Alperen",
-//     age : 25,
-//     showInfos : function() {console.log("Bilgiler Gösteriliyor..");} 
-// };
-// const emp2 = {
-//     name : "Oguzcan",
-//     age : 25
-// };
+//     const emp1 = { //Object Literal
+//      name : "Alperen",
+//      age : 25,
+//      showInfos : function() {console.log("Bilgiler Gösteriliyor..");} 
+//  };
+//      const emp2 = {
+//       name : "Oguzcan",
+//       age : 25
+//   };
 
-// emp1.salary = 4500 //yeni bir değer eklemek için kullanıyoruz.
-// emp1.showInfos();
+//  emp1.salary = 4500 //yeni bir değer eklemek için kullanıyoruz.
+//  emp1.showInfos(); 
 
-// console.log(emp1);
+//  console.log(emp1);
 
 
 
@@ -36,8 +36,10 @@ function Employee(name,age,salary){
     //da kullansaydık window objesini verecekti
 }
 
-const emp1 = new Employee("Alperen" , 25 , 4500);
-const emp2 = new Employee("Oguz" , 25 , 20000);
+ const emp1 = new Employee("Alperen" , 25 , 4500);
+ const emp2 = new Employee("Oguz" , 25 , 20000);
+
+ 
 
  
 

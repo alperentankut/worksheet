@@ -27,7 +27,7 @@ Employee.prototype.showInfos = function(){
 
 
 //Biz ilk yazdığımız showInfosta salary özelliği vermemiştik. Bunu ekleyebilmek
-//için biz tekrar showInfos metodunu yazdık. Buna overrideing deniliyor. Objeler
+//için biz tekrar showInfos metodunu yazdık. Buna overriding deniliyor. Objeler
 //prototype 'lardan metod çağırırken sırasıyla bir üst prototype a gittiği için
 //ilk bulduğu metodu kullanıyor.
 
