@@ -1,16 +1,16 @@
-var longestPalindrome = function(x) {
-    
-    
-    
-}
+const panels = document.querySelectorAll(".panel")
 
 
-const input = prompt("Enter the word : ")
+panels.forEach((panel)=>{
+    panel.addEventListener("click" , ()=>{
+        removeActiveClass()
+        panel.classList.add("active")
+    })
+})
 
-const result = longestPalindrome(input)
+function removeActiveClass(){
+    panels.forEach((panel) => {
+        panel.classList.remove("active")
 
-    
-    
-    
-
-//ksdfjaasd
+    })
+};
