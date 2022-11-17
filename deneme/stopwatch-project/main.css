@@ -5,12 +5,13 @@
 }
 
 body{
-    background-color: aqua;
+    background-color:darkred;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100vw;
 
 }
 h1{
@@ -18,34 +19,32 @@ h1{
     font-size: 5rem;
     
 }
+
+
 .container{
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 20px;
-    width: 100%;
-    
-}
-
-.container .counter{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 20px;
-    font-size: 2.5rem;
-    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
 }
 .start,
 .stop,
 .clear{
-    background-color: brown;
-    color: white;
+    background-color: darkred;
+    color: black;
     padding: 5px 10px;
     margin: 0 30px;
-    border: 2px solid orange;
+    border: 2px solid white;
     border-radius: 10px;
     font-size: 2rem;
+}
+.day,
+.hour,
+.minute,
+.seconds{
+    font-size: 2.5rem;
+    margin:20px;
+    width : 250px;
 }
 .btn:hover{
     cursor: pointer;
