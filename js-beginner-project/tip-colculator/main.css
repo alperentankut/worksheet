@@ -62,10 +62,7 @@ span{
     margin: 30px 5px;
 
 }
-.turkey,
-.france,
-.italy,
-.germany{
+.tip{
     border: 1px solid black;
     border-radius: 3px;
     padding: 8px;
@@ -76,15 +73,6 @@ span{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.ten,
-.fifteen,
-.twenty,
-.twenty-five{
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 10px 25px;
-    background-color: cadetblue;
 }
 .card-footer{
     display: flex;

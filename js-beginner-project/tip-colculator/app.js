@@ -1,64 +1,49 @@
 //---Selectors---
 //All buttons
 
-const allBtn = document.querySelectorAll(".btn");
+//Tip button
 
+const tips = document.querySelector(".tip")
+const allBtn = document.querySelectorAll(".btn")
+const country = document.querySelector(".card-body")
 
-
-//Country Button
-const turkeyBtn = document.querySelector(".turkey");
-const germanyBtn = document.querySelector(".germany");
-const franceBtn = document.querySelector(".france");
-const italyBtn = document.querySelector(".italy")
-const country = document.querySelectorAll(".country")
-
-//Percent button
-
-const tenBtn = document.querySelector(".ten");
-const fifteenBtn = document.querySelector(".fifteen");
-const twentyBtn = document.querySelector(".twenty");
-const twentyFiveBtn = document.querySelector(".twenty-five");
 
 //Result button
 
 const calculateBtn = document.querySelector(".calculate");
 const resetBtn = document.querySelector(".reset")
-const result = document.querySelector(".message-area")
+
 
 //Amount value
 
 const bill = document.querySelector("#price");
 
-//Country tip option
+let turkey = 0;
+let germany = 10;
+let france = 20;
+let italy = 30;
+let percentage;
 
-let Turkey;
-let Germany;
-let France;
-let Italy;
+country.addEventListener("click" , (e)=>{
+    percentage = e.target.innerHTML
 
-country.forEach((selectCountry)=>{
-    selectCountry.addEventListener("click" , ()=>{
-        removeActiveCountry()
-        selectCountry.classList.add("active-country")
-        
-        
-        
-    })
-    function removeActiveCountry(){
-        country.forEach((selectCountry)=>{
-            selectCountry.classList.remove("active-country")
-        })
-        
+
+    if(percentage === "Turkey"){
+        percentage = 0;
+    }
+    else if(percentage === "Germany"){
+        percentage = 12;
+    }
+    else if(percentage === "France"){
+        percentage=18;
+    }
+    else if(percentage === "Italy"){
+        percentage = 21
+    }
+    else{
+        percentage =parseInt(percentage)
     }
 })
-country.forEach((element)=>{
-    if(element.className == "active-country"){
-     console.log("aa")   
-    }
-})
-
-
-
 
 
 
@@ -79,9 +64,11 @@ allBtn.forEach((active)=>{
  
 calculateBtn.addEventListener("click" , ()=>{
     removeActiveClass()
-    const tip = bill.value
-    result.innerHTML += "Vermeniz gereken tutar : " + tip
-    calculateBtn.disabled = true   
+    const tip = bill.value * percentage /100
+    document.querySelector(".message-area").textContent = "Vermeniz gereken tutar : " + tip
+    calculateBtn.disabled = true
+    
+       
 })
 
 
