@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-color: cadetblue;
+    width: 500px;
+    border-radius: 10px;
+
+}
+.title{
+    font-size: 3rem;
+}
+.card-header{
+    
+    display: flex;
+    width: 500px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+
+}
+#price{
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    padding : 10px 100px;
+    border : 1px solid black;
+    border-radius: 5px;
+    background-color: #CCFFFF;
+}
+
+span{
+    position: relative;
+    top: 2.5px;
+    right: 1rem;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.countries{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 30px 5px;
+
+}
+.turkey,
+.france,
+.italy,
+.germany{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: cadetblue;
+    
+}
+.percent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ten,
+.fifteen,
+.twenty,
+.twenty-five{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px 25px;
+    background-color: cadetblue;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.message-area{
+    display: flex;
+    background-color:#CCFFFF;
+    width:93%;
+    height:100px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+.btn:hover{
+    background-color: #CCFFFF;
+    cursor: pointer;
+    transition : 0.3s;
+}
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+    
+}
+.reset,
+.calculate{
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    margin: 20px;
+    background-color: cadetblue;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.active{
+    background-color: #CCFFFF; 
+}

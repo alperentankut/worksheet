@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Tip Calculater</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="title">Tip calculator</h1>
+                <div class="amount">
+                   <span><i class="fa-solid fa-sack-dollar fa-2xl"></i></span>  
+                   <input id="price" placeholder="Enter your bill" type="text" >
+                </div>
+            </div>
+            <div class="card-body">
+                <h3>Select your tipping option</h3>
+                    <div class="countries">
+                        <button class="turkey btn country">Turkey</button>
+                        <button class="germany btn country">Germany</button>
+                        <button class="france btn country">France</button>
+                        <button class="italy btn country">Italy</button>
+                    </div>
+                    <div class="percent">
+                        <button class="ten btn">%10</button>
+                        <button class="fifteen btn">%15</button>
+                        <button class="twenty btn">%20</button>
+                        <button class="twenty-five btn">%25</button>
+                    </div>
+            </div>
+            <div class="card-footer">
+                <div class="message-area"></div>
+                <div class="result">
+                    <button class="calculate btn">Calculate</button>
+                    <button class="reset btn">Reset</button>
+                </div>   
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
