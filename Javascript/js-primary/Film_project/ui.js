@@ -22,8 +22,7 @@ UI.prototype.addFilmToUI = function (newFilm) {
     `
 
 }
-//Yukarda += yerine sadece = yazsaydık eski bilgiler silinir sadece
-//Yazdıklarımız gelirdi onun için += kullanıyoruz.
+
 
 UI.prototype.clearInputs = function(element1 , element2 , element3){
     element1.value = "";
