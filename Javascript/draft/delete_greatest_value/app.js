@@ -18,3 +18,5 @@ var deleteGreatestValue = function (grid){
 }
 
 console.log(deleteGreatestValue([[9,81],[33,17]]))
+
+//
