@@ -1,19 +1,20 @@
 var deleteGreatestValue = function (grid){
-    let count = 0
+    let greatestValue = 0
+    let max = 0
+    let arr = []
     for(let i = 0 ; i<grid.length ; i++){
         for(let j = 0 ; j<grid[i].length ; j++){
-            let number = grid[i][0];
-            if(grid[i][j]>number){
-                count += grid[i][j]
-                grid.splice(i,j);
+            max = Math.max(...grid[i])
+            arr.push(max)
+            grid[i].splice(grid.indexOf(Math.max(grid[i])))
             }
-            
-
-        }
-        console.log(count)
+        greatestValue += Math.max(...arr) 
+           
     }
-
+    console.log(arr)
+    console.log(grid)
+    
+    return greatestValue
 }
 
-
-deleteGreatestValue([[1,2,4],[3,3,1]])
+console.log(deleteGreatestValue([[9,81],[33,17]]))
