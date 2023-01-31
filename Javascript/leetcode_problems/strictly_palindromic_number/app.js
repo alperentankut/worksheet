@@ -13,16 +13,18 @@ var isStrictlyPalindromic = function(n){
             num += String(temp)
             temp = new Number
         }
-        console.log(temp)
         let numReverse = [...num].reverse().join("")
         if(parseInt(num) === parseInt(numReverse)){
             i++
         }
+        if(parseInt(num) === parseInt(numReverse) && i === 9 ){
+            return true
+        }
         else{
-            break
+            return false
         }
     }
-    return num
+    
 }
 
 
