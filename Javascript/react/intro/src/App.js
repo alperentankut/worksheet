@@ -1,37 +1,38 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Navi from "./Navi";
 import CategoryList from "./CategoryList";
 import ProductList from "./ProductList";
 import { Container, Row, Col } from "reactstrap"; // Container ve rowu kullanmak için import etmemiz lazım
 
-function App() {
+export default class App extends Component {
   // let titleCategory = "Category List";
   // let titleProduct = "Product List"
-  let productInfo = {title : "Product List" , other : "other"}
-  let categoryInfo = {title : "Category List"}
-  return (
-    <div>
-      <Container>
-        <Row>
-          <Navi />
-        </Row>
-        <Row>
-          <Col xs="3">
-            {/* <CategoryList title = {titleCategory} /> */}
-            <CategoryList info = {categoryInfo}/>
-          </Col>
-          <Col xs="9">
-            {/* <ProductList title = {titleProduct} /> */}
-            <ProductList info = {productInfo}/>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
-}
 
-export default App;
+  render() {
+    let productInfo = { title: "Product List", other: "other" };
+    let categoryInfo = { title: "Category List" };
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Navi />
+          </Row>
+          <Row>
+            <Col xs="3">
+              {/* <CategoryList title = {titleCategory} /> */}
+              <CategoryList info={categoryInfo} />
+            </Col>
+            <Col xs="9">
+              {/* <ProductList title = {titleProduct} /> */}
+              <ProductList info={productInfo} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
+}
 
 //Reactta üst componentten alt componente veri aktarabiliyoruz fakat
 //alt componentten üst componente veri aktaramıyoruz
@@ -53,9 +54,11 @@ export default App;
 //biz paketlerimizi ya npm install ile yüklüyoruz veya package.json dosyamızda dependencies
 //taginin altına manuel olarak yazıyoruz. (paketi yazdıktan sonra sürüm için ctrl + space).
 
-
-//Yukarda yorum satırına aldığımız productlist ve categorylist gösterimleri işin özünde 
+//Yukarda yorum satırına aldığımız productlist ve categorylist gösterimleri işin özünde
 //doğrudur ve çalışır fakat her yeni veri eklediğimizde jsx yapımızdaki taglere eklediğimiz
 //özellikleri yazmamız gerekecek ve bu çok uzun bir gösterim halini alacak
-//bunun yerine yukarda obje yapısıyla jsx yapısında değişiklik yapmadan yeni verileri sadece 
+//bunun yerine yukarda obje yapısıyla jsx yapısında değişiklik yapmadan yeni verileri sadece
 //obje yapımıza ekleyerek daha temiz bir kod yazmış oluruz.
+
+//props bir componentten diğerine data taşıma yöntemidir.
+//state bir componentin datasıdır.
