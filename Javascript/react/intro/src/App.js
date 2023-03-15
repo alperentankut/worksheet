@@ -8,7 +8,10 @@ import { Container, Row, Col } from "reactstrap"; // Container ve rowu kullanmak
 export default class App extends Component {
   // let titleCategory = "Category List";
   // let titleProduct = "Product List"
-
+  state={currentCategory: "",}
+  changeCategory = (category) => {
+    this.setState({ currentCategory: category.categoryName });
+  };
   render() {
     let productInfo = { title: "Product List", other: "other" };
     let categoryInfo = { title: "Category List" };
@@ -21,11 +24,11 @@ export default class App extends Component {
           <Row>
             <Col xs="3">
               {/* <CategoryList title = {titleCategory} /> */}
-              <CategoryList info={categoryInfo} />
+              <CategoryList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} info={categoryInfo} />
             </Col>
             <Col xs="9">
               {/* <ProductList title = {titleProduct} /> */}
-              <ProductList info={productInfo} />
+              <ProductList currentCategory={this.state.currentCategory} info={productInfo} />
             </Col>
           </Row>
         </Container>

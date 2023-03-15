@@ -9,7 +9,7 @@ export default class CategoryList extends Component {
         { categoryId: 1, categoryName: "Beverages" },
         { categoryId: 2, categoryName: "Condiments" },
       ],
-      currentCategory: "ggg",
+      
     };
   }
   changeCategory = (category) => {
@@ -23,14 +23,14 @@ export default class CategoryList extends Component {
         <ListGroup>
           {this.state.categories.map((category) => (
             <ListGroupItem
-              onClick={() => this.changeCategory(category)}
+              onClick={() => this.props.changeCategory(category)}
               key={category.categoryId}
             >
               {category.categoryName}
             </ListGroupItem>
           ))}
         </ListGroup>
-        <h4>{this.state.currentCategory}</h4>
+        <h4>{this.props.currentCategory}</h4>
       </div>
     );
   }
@@ -40,3 +40,5 @@ export default class CategoryList extends Component {
 //değişiklik olduğunda react virtual DOM'da daha yüksek performansla işlem yapabilsin.
 
 //Yukarda constructor oluşturmadan direk state yazıp categories objesini de oluşturabilirdik.
+
+//!!! state değiştiği anda o state i kullanan tüm componentler yeniden render edilir.!!!
