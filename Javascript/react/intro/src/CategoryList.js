@@ -6,22 +6,21 @@ export default class CategoryList extends Component {
     super(props);
     this.state = {
       categories: [],
-      
     };
   }
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.getCategories();
   }
 
-  getCategories = ()=>{
+  getCategories = () => {
     fetch("http://localhost:3000/categories")
-    .then(response => response.json())
-    .then(data => this.setState({categories:data}))
-  }
+      .then((response) => response.json())
+      .then((data) => this.setState({ categories: data }));
+  };
 
   render() {
     return (
@@ -30,6 +29,11 @@ export default class CategoryList extends Component {
         <ListGroup>
           {this.state.categories.map((category) => (
             <ListGroupItem
+              active={
+                category.categoryName === this.props.currentCategory
+                  ? true
+                  : false
+              }
               onClick={() => this.props.changeCategory(category)}
               key={category.id}
             >
@@ -37,7 +41,6 @@ export default class CategoryList extends Component {
             </ListGroupItem>
           ))}
         </ListGroup>
-        <h4>{this.props.currentCategory}</h4>
       </div>
     );
   }
