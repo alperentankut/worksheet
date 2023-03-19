@@ -1,24 +1,17 @@
-import "./App.css";
+import React, { Component } from 'react'
+import Navbar from './components/Navbar'
 
-function App() {
-  const test = 34;
-  const isAuth = true;
-  return (
-    <div className="App">
-      <h4>{1+1}</h4>
-      <h4>{"alperen".toUpperCase()}</h4>
-      <h4>{test}</h4>
-      <div>
-      {  isAuth ? <p>Kullanıcı kayıtlı</p>
-        : null
-      }
+class App extends Component {
+  render() {
+    return (
+      <div className='container'>
+        <Navbar></Navbar>
       </div>
-
-    </div> 
-  );
+    )
+  }
 }
+export default App
 
-export default App;
 
 //jsx formatı sadece bir tane parent element dönebilir. Bu da genelde div olur
 //htmlde kullandığımız bazı keywordler burda hata verebiliyor. Örneğin htmlde
@@ -27,3 +20,7 @@ export default App;
 //zaten bunu yanlış kullandığımızda consol da hata olarak görebiliyoruz.
 //Biz jsx formatında javascript ifadelerimizi yalnızca süslü parantez içinde
 //yazabiliyoruz.
+//Reactta iki çeşit component var. Birisi functional component diğeri ise
+//class base component. Farkları ise ; component eğer herhangi bir state almıyorsa
+//ve sabit olacaksa bunu functional component olarakta oluşturabiliriz.
+//ancak class componentlarımızda hem state hem propslarımız olacaktır.
