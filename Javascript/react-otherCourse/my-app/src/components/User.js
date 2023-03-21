@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types'
 
 class User extends Component {
   render() {
@@ -18,6 +19,18 @@ class User extends Component {
   }
   
 }
+User.defaultProps = {
+  name : "Bilgi Yok",
+  salary : "Bilgi Yok",
+  department : "Bilgi Yok"
+}
+
+User.propTypes = {
+  name : PropTypes.string.isRequired,
+  salary : PropTypes.string.isRequired,
+  department : PropTypes.string.isRequired 
+};
+
 export default User;
 
 //Biz this.props.name yerine destructing ile bundan kurtulup daha 
