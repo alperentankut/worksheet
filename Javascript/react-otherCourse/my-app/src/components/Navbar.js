@@ -26,4 +26,4 @@ export default Navbar;
 //kod bu anlama geliyor.
 
 //defaultProps ile yazdığımız kodda ise bir props göndermediğimizde default
-//olarak hangi propsun gideceğini belirliyoruz 
+//olarak hangi propsun gideceğini belirliyoruz  
