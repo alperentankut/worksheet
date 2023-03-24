@@ -47,7 +47,8 @@ export default UserConsumer;
 //provider'ı dönmek için provider'ı dönmemiz gerekecek
 //Biz ilerde userprovider ın altına app i koyacağımız için onu temsil
 //etmesi açısından {this.props.children} yerleştiriyoruz. Bu children
-//bizim user provider'ımızın çocuklarını gösteriyor.
+//bizim user provider'ımızın çocuklarını gösteriyor. Bu react tarafından
+//otomatik gönderilen bir props ve app componentimizi temsil ediyor.
 //Diğer uygulamalarımızda bu state i kullanmamız için value değerini
 //state e eşitledik.
 //Bu value 'yi kullanmamız için bir de consumer ı oluşturmamız gerekli.
