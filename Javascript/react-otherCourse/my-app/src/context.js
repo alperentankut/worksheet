@@ -4,6 +4,18 @@ const UserContext = React.createContext();
 
 //Provider , Consumer
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "DELETE_USER":
+      return {
+        ...state,
+        users: state.users.filter(user => action.payload !== user.id),
+      };
+    default :
+        return state  
+  }
+};
+
 export class UserProvider extends Component {
   state = {
     users: [
@@ -26,22 +38,26 @@ export class UserProvider extends Component {
         department: "Gıda",
       },
     ],
+    dispatch: (action) => {
+      this.setState((state) => reducer(state, action));
+    },
   };
   render() {
-    return <UserContext.Provider value = {this.state}>{this.props.children}
-    
-    </UserContext.Provider>;
+    return (
+      <UserContext.Provider value={this.state}>
+        {this.props.children}
+      </UserContext.Provider>
+    );
   }
 }
 
-const UserConsumer = UserContext.Consumer
+const UserConsumer = UserContext.Consumer;
 
 export default UserConsumer;
 
 //Biz bunu bu şekilde oluşturmadan , kullanacağımız yerlerde
-// UserContext.consumer şeklinde kullanabiliriz. fakat yukardaki 
+// UserContext.consumer şeklinde kullanabiliriz. fakat yukardaki
 //daha güvenli bir yöntem olacaktır.
-
 
 //Yapımız bir div dönmeyecek. Biz burda User context'imizin sağladığı
 //provider'ı dönmek için provider'ı dönmemiz gerekecek
