@@ -3,7 +3,7 @@
 }
 .title {
   text-align: center;
-  color: brown;
+  color:white
 }
 .list-group {
   height: 500px;
@@ -13,4 +13,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#istanbul, #ankara, #izmir, #gaziantep{
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+.card{
+    background-color:darkorange
+}
+.list-group-item{
+    background-color: darkorange;
+}
+.btn:hover{
+    background-color:cornflowerblue
 }
