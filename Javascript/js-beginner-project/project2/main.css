@@ -1,0 +1,16 @@
+* {
+  font-family: "Roboto Serif", serif;
+}
+.title {
+  text-align: center;
+  color: brown;
+}
+.list-group {
+  height: 500px;
+  justify-content: space-around;
+}
+.clock-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

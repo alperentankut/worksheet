@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap  5-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Main css -->
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="startTime()">
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h1 class="title">İmsakiye</h1>
+          </div>
+          <ul class="list-group list-group-flush">
+            <div class="list-group-item clock-area">
+              <h2>Saat :</h2>
+              <h2 id="clock"></h2>
+            </div>
+            <li class="list-group-item">
+              <button class="btn btn-success" id="city1">İstanbul</button>
+            </li>
+            <li class="list-group-item">
+              <button class="btn btn-success" id="city2">Ankara</button>
+            </li>
+            <li class="list-group-item">
+              <button class="btn btn-success" id="city3">İzmir</button>
+            </li>
+            <li class="list-group-item">
+              <button class="btn btn-success" id="city4">Gaziantep</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
