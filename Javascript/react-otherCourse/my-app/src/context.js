@@ -9,10 +9,10 @@ const reducer = (state, action) => {
     case "DELETE_USER":
       return {
         ...state,
-        users: state.users.filter(user => action.payload !== user.id),
+        users: state.users.filter((user) => action.payload !== user.id),
       };
-    default :
-        return state  
+    default:
+      return state;
   }
 };
 
