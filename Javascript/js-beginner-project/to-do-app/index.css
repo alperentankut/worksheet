@@ -1,0 +1,89 @@
+*{
+    font-family: 'Roboto Serif', serif;
+
+}
+body{
+    background-color: chocolate;
+}
+.app-body{
+    background-color: chocolate;
+    position: relative;
+    margin: auto;
+    height: auto;
+    
+}
+.title{
+    text-align: center;
+}
+.option:hover{
+    cursor: pointer;
+}
+.input-area{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: relative;
+    margin: auto;
+}
+.input{
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 5px;
+}
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.submit{
+    background-color:green;
+    color: white;
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.categories{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.todo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between ;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.icons{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.icons>i{
+    margin: 10px;
+}
+.icons>i:hover{
+    cursor: pointer;
+}
+.categories>div{
+   display: flex;
+   flex-direction: column;
+   background-color:white;
+   border-radius: 7px;
+   margin: 10px;
+   width: 50%;
+   text-align: center;
+}
+hr{
+    width: 90%;
+}
+.done{
+    text-decoration: line-through;
+    text-decoration-color:green;
+}
