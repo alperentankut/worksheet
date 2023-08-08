@@ -5,7 +5,7 @@ const btn = document.querySelector(".submit");
 const categories = document.querySelector(".categories");
 const option = document.querySelector(".option");
 const checkTodo = document.querySelector(".fa-check");
-
+//Event Listeners
 btn.addEventListener("click", () => {
   const value = input.value;
   if (value === "") {
@@ -27,6 +27,3 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// if(e.target.className === todo.className){
-//   todo.remove()
-// }
