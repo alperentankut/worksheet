@@ -72,13 +72,14 @@ body{
     cursor: pointer;
 }
 .categories>div{
-   display: flex;
-   flex-direction: column;
-   background-color:white;
-   border-radius: 7px;
-   margin: 10px;
-   width: 50%;
-   text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    border-radius: 7px;
+    margin: 10px;
+    width: 50%;
+    text-align: center;
+    height: fit-content;
 }
 hr{
     width: 90%;
@@ -87,3 +88,4 @@ hr{
     text-decoration: line-through;
     text-decoration-color:green;
 }
+
