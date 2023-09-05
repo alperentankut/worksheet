@@ -55,6 +55,11 @@ const UserSchema = new Schema({
 
 })
 
+module.exports  = mongoose.model("User" , UserSchema)
+
+//Yukardaki export ile oluşturduğumuz UserSchema yı User ismiyle
+//mongoose a kaydediyoruz.
+
 //Yukarda yazdığımız match bir regex. Bunu yazmaktaki amacımız
 //kişi örneğin alperen.com diye bir mail girdiğinde bunun geçersiz
 //olduğunu ve gerçek mail formatında yazması gerektiğini söylüyoruz.
