@@ -10,7 +10,7 @@ const UserSchema = new Schema({
     },
     email : {
         type : String,
-        required : true,
+        required : [true,"Please provide a email"],
         unique : [true,"Please try different email"],
         match : [
             /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
@@ -53,7 +53,20 @@ const UserSchema = new Schema({
         default : false
     }
 
+});
+
+UserSchema.pre("save",function(next){
+    console.log("Pre hooks : Save");
+    next()
 })
+
+//Yukarda yazdığımız kod mongoose ile gelen bir
+//hook özelliği. Burda pre fonksiyonuyla save
+//işleminden hemen sonra yapmak istediğimiz 
+//fonksiyonu yazıyoruz. Fonksiyonun ilk parametresi
+//hangi işlemden önce yapılmasını istiyorsak o 
+//işlemi alıyor ikinci parametre ise yazmak istediğimiz
+//fonksiyonu.
 
 module.exports  = mongoose.model("User" , UserSchema)
 
