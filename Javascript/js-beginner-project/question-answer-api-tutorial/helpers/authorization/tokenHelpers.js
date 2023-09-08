@@ -18,4 +18,16 @@ const sendJwtToClient = (user, res) => {
     });
 };
 
-module.exports = sendJwtToClient
+const isTokenIncluded = (req) => {
+  return (
+    req.headers.authorization && req.headers.authorization.startsWith("Bearer: ")
+  );
+};
+const getAccessTokenFromHeader = (req) => {
+  const authorization = req.headers.authorization;
+
+  const accessToken = authorization.split(" ")[1];
+  return accessToken;
+};
+
+module.exports = { sendJwtToClient, isTokenIncluded, getAccessTokenFromHeader };
