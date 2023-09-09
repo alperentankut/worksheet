@@ -3,6 +3,7 @@ const dotenv = require("dotenv")
 const connectDatabase = require("./helpers/database/connectDatabase")
 const customErrorHandler = require("./middlewares/errors/customErrorHandler")
 const routers = require("./routers")
+const path = require("path")
 
 
 
@@ -32,6 +33,17 @@ app.use("/api",routers)
 //Error Handler
 
 app.use(customErrorHandler)
+
+//Static Files
+
+app.use(express.static(path.join(__dirname,"public")))
+
+
+//Bizim statik dosyalarımızı express biz belirtmeden
+//göremiyor. Bundan dolayı bu middleware ile public
+//klasörümüzü tanıtıyoruz.
+//dirname ve public birleştirilip expresse bildiriliyor.
+
 
 app.listen(PORT,()=>{
     console.log(`App Started on ${PORT} : ${process.env.NODE_ENV}`)

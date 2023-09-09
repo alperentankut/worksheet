@@ -39,23 +39,23 @@ const login = asyncErrorWrapper(async (req, res, next) => {
   }
 
   sendJwtToClient(user, res);
-
 });
 
 const logout = asyncErrorWrapper(async (req, res, next) => {
-  const {NODE_ENV} = process.env
+  const { NODE_ENV } = process.env;
 
-  return res.status(200)
-  .cookie({
-    httpOnly : true,
-    expires : new Date(Date.now()),
-    secure : NODE_ENV === "development" ? false : true
-  })
-  .json({
-    sucess : true,
-    message : "Logout successfull"
-  })
-})
+  return res
+    .status(200)
+    .cookie({
+      httpOnly: true,
+      expires: new Date(Date.now()),
+      secure: NODE_ENV === "development" ? false : true,
+    })
+    .json({
+      sucess: true,
+      message: "Logout successfull",
+    });
+});
 
 const getUser = (req, res, next) => {
   res.json({
@@ -66,12 +66,33 @@ const getUser = (req, res, next) => {
     },
   });
 };
+const imageUpload = asyncErrorWrapper(async (req, res, next) => {
+  // Image upload success
+  const user = await User.findByIdAndUpdate(
+    req.user.id,
+    {
+      "profile_image": req.savedProfileImage,
+    },
+    {
+      new: true,
+      runValidators: true, //bu 3. parametre yeni user döndüğü için
+      //yazılıyor. Doğrulayıcıların çalışması içinde runValidators
+      //kullanılıyor.
+    }
+  );
+  res.status(200).json({
+    success: true,
+    message: "Image Upload Successful",
+    data : user
+  });
+});
 
 module.exports = {
   register,
   getUser,
   logout,
   login,
+  imageUpload,
 };
 
 //Senkron işlemlerde express hatayı otomatik olarak yakalayabiliyor
