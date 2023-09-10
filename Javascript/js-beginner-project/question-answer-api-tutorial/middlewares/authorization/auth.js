@@ -14,6 +14,7 @@ const getAccessToRoute = (req, res, next) => {
     return next(
       new CustomError("You are not authorized to access this route", 401)
     );
+    
   }
 
   const accessToken = getAccessTokenFromHeader(req);

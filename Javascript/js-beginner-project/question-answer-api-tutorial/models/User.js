@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 
 const UserSchema = new Schema({
   name: {
@@ -52,25 +53,46 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  resetPasswordToken: {
+    type: String,
+  },
+  resetPasswordExpire: {
+    type: Date,
+  },
 });
 
 //UserSchema Methods
 
-UserSchema.methods.generateJwtFromUser = function (){
-    const {JWT_SECRET_KEY,JWT_EXPIRE} = process.env;
-    
-    const payload = {
-        id : this._id,
-        name : this.name
-    };
-    const token = jwt.sign(payload,JWT_SECRET_KEY,{
-        expiresIn : JWT_EXPIRE
-    })
-    return token
-}
+UserSchema.methods.generateJwtFromUser = function () {
+  const { JWT_SECRET_KEY, JWT_EXPIRE } = process.env;
 
+  const payload = {
+    id: this._id,
+    name: this.name,
+  };
+  const token = jwt.sign(payload, JWT_SECRET_KEY, {
+    expiresIn: JWT_EXPIRE,
+  });
+  return token;
+};
 
 //Pre hooks
+
+UserSchema.methods.getResetPasswordTokenFromUser = function () {
+  const randomHexString = crypto.randomBytes(15).toString("hex");
+  const {RESET_PASSWORD_EXPIRE} = process.env
+  const resetPasswordToken = crypto
+    .createHash("SHA256")
+    .update(randomHexString)
+    .digest("hex");
+
+  this.resetPasswordToken = resetPasswordToken,
+  this.resetPasswordExpire = Date.now() + parseInt(RESET_PASSWORD_EXPIRE);
+  //Şu anki zamandan 1 saat sonrasına kadar geçerli olacak
+
+  return resetPasswordToken;
+};
+
 UserSchema.pre("save", function (next) {
   //if password not change
   if (!this.isModified("password")) {

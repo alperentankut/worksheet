@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     const extension = file.mimetype.split("/")[1];
-    //yukardaki fonksiyonad örneğin bize gelen resim
+    //yukardaki fonksiyonda örneğin bize gelen resim
     //asdf/png olsun biz bunun dosya tipini alıp filtrelemek
     //için splitle [asdf,png] şeklinde array oluşturup
     //1. indeksi olarak dosya tipini seçiyoruz.
