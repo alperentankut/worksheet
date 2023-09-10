@@ -110,7 +110,7 @@ UserSchema.pre("save", function (next) {
 
 //Yukarda yazdığımız kod mongoose ile gelen bir
 //hook özelliği. Burda pre fonksiyonuyla save
-//işleminden hemen sonra yapmak istediğimiz
+//işleminden hemen önce yapmak istediğimiz
 //fonksiyonu yazıyoruz. Fonksiyonun ilk parametresi
 //hangi işlemden önce yapılmasını istiyorsak o
 //işlemi alıyor ikinci parametre ise yazmak istediğimiz

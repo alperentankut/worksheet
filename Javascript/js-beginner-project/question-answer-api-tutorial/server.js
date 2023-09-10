@@ -58,10 +58,6 @@ app.listen(PORT,()=>{
 // //başka bilgisayarlarda çalışırken 5000 portunda çalış-
 // //amazsa uygun portta çalışmasını sağlıyor.
 
-// app.get("/api/questions",(req,res)=>{
-//     res.send("Question Home Page")
-// })
-
 // //Biz yukarda /api/questions yoluna gidildiğinde yapılmasını
 // //istediğimiz şeyleri yazacağız.
 
@@ -72,7 +68,5 @@ app.listen(PORT,()=>{
 //kullanışlı olacaktır. Bunu da routers klasörü oluşturup burda yapabiliriz.
 
 
-// app.use("/api/questions",question)
-//app.use("/api/auth",auth)
 //biz yapımızı daha moduler hale getirmek adına 
 //bu middleware lerimizi index.js içinde yazacağız.
