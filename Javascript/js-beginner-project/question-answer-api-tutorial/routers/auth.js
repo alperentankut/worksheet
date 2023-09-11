@@ -3,7 +3,6 @@ const { register, getUser, login, logout ,imageUpload , forgotPassword , resetPa
 const { getAccessToRoute } = require("../middlewares/authorization/auth");
 const profileImageUpload = require("../middlewares/libraries/profileImageUpload");
 // api/auth
-// api/auth/register
 
 const router = express.Router();
 
