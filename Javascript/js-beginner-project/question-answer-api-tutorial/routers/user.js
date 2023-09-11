@@ -1,10 +1,11 @@
 const express = require("express");
-const {getSingleUser} = require("../controllers/user.js")
+const {getSingleUser , getAllUsers} = require("../controllers/user.js");
+const {checkUserExist} = require("../middlewares/database/databaseErrorHelpers")
 
 const router = express.Router();
 
-
-router.get("/:id",getSingleUser)
+router.get("/",getAllUsers) ; //Tüm kullanıcıları alma
+router.get("/:id",checkUserExist,getSingleUser) //idye göre kullanıcı alma
 
 //id yi dinamik olarak alabilmek için expressin
 //bir özelliği olan /:id özelliğini kullandık.

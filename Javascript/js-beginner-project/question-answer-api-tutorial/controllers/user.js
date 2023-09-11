@@ -9,13 +9,20 @@ const getSingleUser = asyncErrorWrapper(async(req,res,next)=>{
 
     const user = await User.findById(id);
 
-    if(!user){
-        return next(new CustomError("There is no such user with that id",400))
-    }
-
     return res.status(200).json({
         success : true,
         data : user
     })
 })
-module.exports = {getSingleUser}
+
+const getAllUsers = asyncErrorWrapper(async(req,res,next)=>{
+    const users = await User.find(); //find ın içine bir değer vermezsek 
+    //bütün kullanıcıları getiriyor
+
+    return res.status(200).json({
+        success : true,
+        data : users
+    })
+})
+
+module.exports = {getSingleUser , getAllUsers}
