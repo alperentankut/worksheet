@@ -163,6 +163,22 @@ const resetPassword = asyncErrorWrapper(async (req, res, next) => {
   });
 });
 
+const editDetails = asyncErrorWrapper(async(req,res,next)=>{
+  const editInformation = req.body;
+
+  const user = await User.findByIdAndUpdate(req.user.id,editInformation,{
+    new : true,
+    runValidators : true
+  })
+  //ilk parametre id ikinci parametre güncellemek istediğimiz bilgiler üçüncü
+  //parametremiz ise user verimizin güncellenmesi için
+  return res.status(200).json({
+    success : true,
+    data : user
+  })
+
+})
+
 module.exports = {
   register,
   getUser,
@@ -171,6 +187,7 @@ module.exports = {
   imageUpload,
   forgotPassword,
   resetPassword,
+  editDetails
 };
 
 //Senkron işlemlerde express hatayı otomatik olarak yakalayabiliyor
