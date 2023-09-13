@@ -1,5 +1,6 @@
 const User = require("../../models/User");
 const CustomError = require("../../helpers/error/CustomError");
+const Question = require("../../models/Question")
 const asyncErrorWrapper = require("express-async-handler");
 
 const checkUserExist = asyncErrorWrapper(async (req, res, next) => {
@@ -13,7 +14,21 @@ const checkUserExist = asyncErrorWrapper(async (req, res, next) => {
   next();
 });
 
-module.exports = { checkUserExist };
+const checkQuestionExist = asyncErrorWrapper(async (req, res, next) => {
+  const { id } = req.params;
+  console.log(id)
+  const question = await Question.findById(id);
+
+  if (!question) {
+    return next(new CustomError("There is no such question with that id", 400));
+  }
+  next();
+});
+
+
+
+
+module.exports = { checkUserExist ,checkQuestionExist };
 
 //biz her seferinde bu id kontrolü yapmak yerine bunu
 //merkezi bir middleware ile tek seferde kontrol etmek 
