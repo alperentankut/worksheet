@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
+const Question = require("./Question")
 
 const UserSchema = new Schema({
   name: {
@@ -107,6 +108,12 @@ UserSchema.pre("save", function (next) {
     });
   });
 });
+
+UserSchema.post("deleteOne",async function(){
+    await Question.deleteMany({
+      user:this._id
+  })
+})
 
 //Yukarda yazdığımız kod mongoose ile gelen bir
 //hook özelliği. Burda pre fonksiyonuyla save
