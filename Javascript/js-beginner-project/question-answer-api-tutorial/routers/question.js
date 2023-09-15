@@ -1,4 +1,5 @@
 const express = require("express");
+const answer = require("./answer")
 const {
   getAllQuestions,
   askNewQuestion,
@@ -7,7 +8,7 @@ const {
   deleteQuestion,
   likeQuestion,
   undoLikeQuestion,
-} = require("../controllers/question");
+} = require("../controllers/question")
 const {
   getAccessToRoute,
   getQuestionOwnerAccess,
@@ -36,5 +37,9 @@ router.delete(
   [getAccessToRoute, checkQuestionExist, getQuestionOwnerAccess],
   deleteQuestion
 );
+
+router.use("/:id/answers",checkQuestionExist,answer);
+//answer ve questionlar arasında sıkı bir bağ olacağı için
+//answer ların route ını bu şekilde verdik
 
 module.exports = router;
