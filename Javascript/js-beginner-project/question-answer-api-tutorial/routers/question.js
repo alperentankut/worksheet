@@ -38,7 +38,7 @@ router.delete(
   deleteQuestion
 );
 
-router.use("/:id/answers",checkQuestionExist,answer);
+router.use("/:question_id/answers",checkQuestionExist,answer);
 //answer ve questionlar arasında sıkı bir bağ olacağı için
 //answer ların route ını bu şekilde verdik
 
