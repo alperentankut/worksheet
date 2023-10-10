@@ -11,6 +11,8 @@ import serviceAccount from "../key/serviceAccountKey.json" assert { type: "json"
 initializeApp({
   credential: cert(serviceAccount),
 });
+console.log("Firebase connection succesfully")
+
 
 
 
