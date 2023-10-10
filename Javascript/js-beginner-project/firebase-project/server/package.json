@@ -1,0 +1,22 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node"
+  },
+  "author": "admin",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "firebase": "^10.4.0",
+    "firebase-admin": "^11.11.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/preset-react": "^7.22.15"
+  }
+  
+}
