@@ -11,11 +11,11 @@ import "../database/connectDatabase.js";
 const db = getFirestore();
 
 const studentsData = {
-  ad: "Akif",
-  soyad: "öz",
-  sınıf: "5",
-  veli: "Taner Öz",
-  yaş: "10",
+  ad: "Sabri",
+  soyad: "Yılmaz",
+  sınıf: "3",
+  veli: "Tarık Yılmaz",
+  yaş: "9",
 };
 const parentName = studentsData.veli.split(" ")[0];
 const parentSurname = studentsData.veli.split(" ")[1];
