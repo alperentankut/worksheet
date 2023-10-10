@@ -11,11 +11,11 @@ import "../database/connectDatabase.js";
 const db = getFirestore();
 
 const studentsData = {
-  ad: "Ali",
-  soyad: "Tan",
-  sınıf: "4",
-  veli: "Ahmet Tan",
-  yaş: "9",
+  ad: "Akif",
+  soyad: "öz",
+  sınıf: "5",
+  veli: "Taner Öz",
+  yaş: "10",
 };
 const parentName = studentsData.veli.split(" ")[0];
 const parentSurname = studentsData.veli.split(" ")[1];
@@ -24,5 +24,12 @@ const parentData = {
   soyad: parentSurname,
 };
 
-const sendStudent = await db.collection("students").doc().set(studentsData);
-const sendParent = await db.collection("parents").doc().set(parentData);
+const sendStudent = await db.collection("students").add(studentsData);
+const sendParent = await db.collection("parents").add(parentData);
+
+const parentId = sendParent.id;
+const studentId = sendStudent.id;
+
+const getStudent = db.collection("students").doc(studentId);
+
+const updateStudent = await getStudent.update({ veli: parentId });

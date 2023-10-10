@@ -5,19 +5,25 @@ import {
   FieldValue,
   Filter,
 } from "firebase-admin/firestore";
-import { getDoc, DocumentReference } from "firebase/firestore";
 import "../database/connectDatabase.js"
 
 
 
 const db = getFirestore();
 
-const user = db.collection('students').doc("CNM2a1urkltJkrQbCnQL")
+//Students İnfo
+const user = db.collection('students').doc("0rmtczbSWNlkWM1SfqK7")
 const doc = await user.get();
-const id = doc.data().veli
-const parents = db.collection("parents").doc(id)
-const res = await parents.get()
-console.log(res.data());
+const data = doc.data()
+
+
+//Parent İnfo
+const parents = db.collection("parents").doc(data.veli)
+const document = await parents.get()
+const lastData = document.data()
+
+console.log(data);
+console.log(lastData)
 
 
 
