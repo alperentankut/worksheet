@@ -58,8 +58,3 @@ if (lastCount === 0) {
   updateSync();
 }
 
-// const updateData = await syncTime.where("id", "==", id).get();
-//   updateData.forEach(async (el) => {
-//     const update = syncTime.doc(el.id)
-//     update.update({synchronize_time : microtime.now()})
-//   });
