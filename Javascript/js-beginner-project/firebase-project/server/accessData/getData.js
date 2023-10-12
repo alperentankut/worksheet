@@ -5,25 +5,22 @@ import {
   FieldValue,
   Filter,
 } from "firebase-admin/firestore";
-import "../database/connectDatabase.js"
-
-
+import "../database/connectFirebase.js";
 
 const db = getFirestore();
 
-//Students İnfo
-const user = db.collection('students').doc("0rmtczbSWNlkWM1SfqK7")
+// //Students İnfo
+const user = db.collection("students").doc("0rmtczbSWNlkWM1SfqK7");
 const doc = await user.get();
-const data = doc.data()
+const data = doc.data();
+console.log(doc)
 
+// //Parent İnfo
+// const parents = db.collection("parents").doc(data.veli);
+// const document = await parents.get();
+// const parentData = document.data();
 
-//Parent İnfo
-const parents = db.collection("parents").doc(data.veli)
-const document = await parents.get()
-const lastData = document.data()
-
-console.log(data);
-console.log(lastData)
-
+// console.log(data);
+// console.log(parentData);
 
 

@@ -6,16 +6,17 @@ import {
   Filter,
 } from "firebase-admin/firestore";
 
+
 import "../database/connectDatabase.js";
 
 const db = getFirestore();
 
 const studentsData = {
-  ad: "Sabri",
-  soyad: "Yılmaz",
-  sınıf: "3",
-  veli: "Tarık Yılmaz",
-  yaş: "9",
+  ad: "Ahmet",
+  soyad: "Öz",
+  sinif: "3",
+  veli: "Ali Öz",
+  yas: "9",
 };
 const parentName = studentsData.veli.split(" ")[0];
 const parentSurname = studentsData.veli.split(" ")[1];
